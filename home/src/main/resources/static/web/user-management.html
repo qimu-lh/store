@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>用户管理</title>
+    <!-- Mobile Specific Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/font-awesome.min.css">
+    <!-- Feather Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/feather-icons.css">
+    <!-- Pixeden Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/pixeden.css">
+    <!-- Social Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/socicon.css">
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/photoswipe.css">
+    <!-- Izitoast Notification CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/izitoast.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/style.css">
+</head>
+<body>
+<div class="offcanvas-wrapper">
+    <!-- Start Page Title -->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>用户管理</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li><a href="">管理员</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li>用户管理</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--导航结束-->
+    <div class="container padding-top-1x padding-bottom-3x">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <!--地址显示-->
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>用户名</th>
+                            <th>室内温度</th>
+                            <th>室内湿度</th>
+                            <th>空调模式</th>
+                            <th>空调温度</th>
+                            <th>空调风速</th>
+                            <th>厨房灯</th>
+                            <th>卫生间灯</th>
+                            <th>卧室灯</th>
+                            <th>客厅灯</th>
+                            <th>门窗磁</th>
+                            <th colspan="3">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="user-list">
+                        <tr>
+                            <td>佐助</td>
+                            <td>13℃</td>
+                            <td>50%</td>
+                            <td>制热</td>
+                            <td>20℃</td>
+                            <td>中</td>
+                            <td>开灯</td>
+                            <td>关灯</td>
+                            <td>0</td>
+                            <td>50</td>
+                            <td>开窗</td>
+                            <td><a class="btn btn-xs add-del btn-danger" href="#">删除</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页脚开始-->
+<footer class="site-footer">
+    <div class="container">
+        <!-- Start Copyright -->
+        <p class="footer-copyright text-center">© 2020 edu | All rights <a href="">Reserved</a></p>
+        <!-- End Copyright -->
+    </div>
+</footer>
+<!--页脚结束-->
+</body>
+<script src="../assets/js/jquery.min.js"></script>
+<!--自定义js代码-->
+<script src="../assets/myjs/manage.js"></script>
+</html>

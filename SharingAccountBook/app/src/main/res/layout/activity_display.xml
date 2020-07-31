@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_alignParentTop="true"
+        android:id="@+id/top"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:src="@drawable/hportrait" />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="用户昵称"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/top"
+        android:layout_above="@+id/bottom"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#aa000000" />
+        <ListView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/accountBook"
+            >
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="right"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout
+            xmlns:rfal="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/dis_rfal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            rfal:rfal_frame_color="#ffffff"
+            rfal:rfal_frame_alpha="0.7"
+            >
+            <com.wangjie.rapidfloatingactionbutton.RapidFloatingActionButton
+                xmlns:rfab="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/dis_rfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:padding="8dp"
+                rfab:rfab_size="mini"
+                rfab:rfab_drawable="@drawable/rfab__drawable_rfab_default"
+                rfab:rfab_color_normal="#37474f"
+                rfab:rfab_color_pressed="#263238"
+                rfab:rfab_shadow_radius="7dp"
+                rfab:rfab_shadow_color="#999999"
+                rfab:rfab_shadow_dx="0dp"
+                rfab:rfab_shadow_dy="5dp"
+                />
+        </com.wangjie.rapidfloatingactionbutton.RapidFloatingActionLayout>
+    </LinearLayout>
+
+    <!--    <LinearLayout
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="转交"
+                android:id="@+id/autorenew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:text="同步"
+                android:id="@+id/da_BT_updata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>-->
+</RelativeLayout>
+

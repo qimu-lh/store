@@ -1,0 +1,42 @@
+2020-06-22 22:41:32.820  INFO 17264 --- [main] pers.huangyuhui.memo.MemoApplication     : Starting MemoApplication on DESKTOP-6EGAP2F with PID 17264 (E:\Intellij_IDEA_Workspace\springboot-beginner-refactor-190823\memo\target\classes started by 19087 in E:\Intellij_IDEA_Workspace\springboot-beginner-refactor-190823)
+2020-06-22 22:41:32.822  INFO 17264 --- [main] pers.huangyuhui.memo.MemoApplication     : No active profile set, falling back to default profiles: default
+2020-06-22 22:41:33.912  INFO 17264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-22 22:41:33.939  INFO 17264 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-22 22:41:33.940  INFO 17264 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-06-22 22:41:34.044  INFO 17264 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-22 22:41:34.044  INFO 17264 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1175 ms
+2020-06-22 22:41:34.084  INFO 17264 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void pers.huangyuhui.memo.service.impl.FriendServiceImpl.setBaseMapper()
+2020-06-22 22:41:34.442  INFO 17264 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-22 22:41:34.665  INFO 17264 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-22 22:41:34.668  INFO 17264 --- [main] pers.huangyuhui.memo.MemoApplication     : Started MemoApplication in 2.352 seconds (JVM running for 3.945)
+2020-06-22 22:41:53.209  INFO 17264 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-22 22:41:53.210  INFO 17264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-22 22:41:53.219  INFO 17264 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-06-22 22:41:53.236  WARN 17264 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2020-06-22 22:42:38.546  WARN 17264 --- [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /main.html
+2020-06-22 22:43:09.986  WARN 17264 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /template/main.html
+2020-06-22 22:44:56.790  WARN 17264 --- [http-nio-8080-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /template/main.html
+2020-06-22 22:45:04.074  WARN 17264 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /main.html
+2020-06-22 22:45:07.245  WARN 17264 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2020-06-22 22:47:00.776  WARN 17264 --- [http-nio-8080-exec-7] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/main.html
+2020-06-22 22:47:31.889  WARN 17264 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/main.html
+2020-06-22 22:47:41.731  WARN 17264 --- [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /main.html
+2020-06-22 22:47:44.638  WARN 17264 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2020-06-22 22:48:24.952  INFO 3672 --- [main] pers.huangyuhui.memo.MemoApplication     : Starting MemoApplication on DESKTOP-6EGAP2F with PID 3672 (E:\Intellij_IDEA_Workspace\springboot-beginner-refactor-190823\memo\target\classes started by 19087 in E:\Intellij_IDEA_Workspace\springboot-beginner-refactor-190823)
+2020-06-22 22:48:24.954  INFO 3672 --- [main] pers.huangyuhui.memo.MemoApplication     : No active profile set, falling back to default profiles: default
+2020-06-22 22:48:25.956  INFO 3672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-22 22:48:25.975  INFO 3672 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-22 22:48:25.975  INFO 3672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-06-22 22:48:26.064  INFO 3672 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-22 22:48:26.064  INFO 3672 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1060 ms
+2020-06-22 22:48:26.118  INFO 3672 --- [main] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation should only be used on methods with parameters: public void pers.huangyuhui.memo.service.impl.FriendServiceImpl.setBaseMapper()
+2020-06-22 22:48:26.434  INFO 3672 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-22 22:48:26.652  INFO 3672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-22 22:48:26.655  INFO 3672 --- [main] pers.huangyuhui.memo.MemoApplication     : Started MemoApplication in 2.061 seconds (JVM running for 2.839)
+2020-06-22 22:48:48.878  INFO 3672 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-22 22:48:48.880  INFO 3672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-22 22:48:48.887  INFO 3672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-06-22 22:48:48.904  WARN 3672 --- [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2020-06-22 22:48:54.157  WARN 3672 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/
+2020-06-22 22:49:00.020  WARN 3672 --- [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /templates/main.html
+2020-06-22 22:49:07.917  WARN 3672 --- [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /main.html

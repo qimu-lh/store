@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:orientation="vertical"
+    android:background="#d7ecf1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:background="#d7ecf1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="注册"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/reg_bt_Hportrait"
+            android:visibility="gone"
+            android:text="选择图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/reg_Ima_Hportrait"
+            android:src="@drawable/hportrait"
+            android:layout_width="170px"
+            android:layout_height="170px" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/reg_T_Uname"
+            android:maxLength="10"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="账号："/>
+
+        <EditText
+            android:hint="4-20位"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:id="@+id/reg_Edt_Uname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/reg_T_Psd"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="密码："/>
+
+        <EditText
+
+            android:id="@+id/reg_Edt_Psd"
+            android:maxLines="1"
+            android:hint="只支持数字，字母和点,8-16位"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ."
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/reg_T_RPsd"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="确认密码："/>
+
+        <EditText
+            android:id="@+id/reg_Edt_RPsd"
+            android:maxLines="1"
+            android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ."
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        />
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/reg_T_Nickname"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="昵称:"/>
+
+        <EditText
+            android:hint="4-20位"
+            android:id="@+id/reg_Edt_Nickname"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:layout_toRightOf="@+id/reg_T_Nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        />
+    </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/reg_T_phone"
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="手机:"/>
+
+            <EditText
+                android:id="@+id/reg_Edt_phone"
+                android:maxLines="1"
+                android:maxLength="11"
+                android:inputType="phone"
+                android:layout_toRightOf="@+id/reg_T_Nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            />
+        </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/reg_T_ID"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="身份:"/>
+
+
+        <Spinner
+            android:id="@+id/reg_Sp_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp">
+        </Spinner>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/reg_Ima_Check"
+            android:adjustViewBounds="true"
+            android:maxHeight="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/reg_Edt_Check"
+            android:maxLines="1"
+            android:layout_toRightOf="@+id/reg_T_Nickname"
+            android:hint="输入左图验证码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:background="@drawable/mybutton"
+            android:id="@+id/reg_bt_check"
+            android:text="换一张"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp" />
+        />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@drawable/mybutton"
+
+            android:id="@+id/reg_bt_submit"
+            android:text="提交"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp" />
+        <Button
+            android:background="@drawable/mybutton"
+            android:id="@+id/reg_bt_cancel"
+            android:text="取消"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp" />
+    </LinearLayout>.
+
+
+</LinearLayout>
+</ScrollView>

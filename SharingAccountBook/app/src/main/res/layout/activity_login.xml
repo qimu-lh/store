@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/login_bgmini"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:padding="50dp"
+        android:id="@+id/center"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/lo_Edt_Uname"
+                android:drawableLeft="@drawable/ic_portrait"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:drawableLeft="@drawable/ic_lock"
+                android:id="@+id/lo_Edt_Psd"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/lo_Edt_Check"
+                android:maxLines="1"
+                android:layout_toRightOf="@+id/reg_T_Nickname"
+                android:hint="输入右图验证码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:id="@+id/lo_IMB_check"
+                android:adjustViewBounds="true"
+                android:maxHeight="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@+id/center"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/login"
+                android:background="@drawable/mybutton"
+                android:text="登录"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/lo_bt_register"
+                android:background="@drawable/mybutton"
+                android:text="注册"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

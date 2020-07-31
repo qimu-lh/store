@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:match="http://schemas.android.com/apk/res-auto"
+    android:background="#000000"
+    android:id="@+id/Welcome"
+    tools:context="coursedesign.lancelot.sharingaccountbook.Activity.WelcomeActivity">
+
+    <com.roger.match.library.MatchTextView
+        android:id="@+id/top"
+        android:layout_centerInParent="true"
+        match:text="WelCome"
+        match:textSize="15sp"
+        match:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.roger.match.library.MatchButton
+        android:id="@+id/MatchButton"
+        android:layout_below="@+id/top"
+        match:textColor="#ffffff"
+        match:text="go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+

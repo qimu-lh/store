@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SmartHome</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap3/css/bootstrap01.css">
+    <link rel="stylesheet" type="text/css" href="../bootstrap3/font-awesome-4.7.0/css/font-awesome.css"/>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="../css/album.css">
+    <link href="../css/mfb.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/circle-progress.css">
+    <link rel="stylesheet" type="text/css" href="../css/circle-progress02.css">
+    <link href="../css/dashboard.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+    </style>
+    <script src="../bootstrap3/jquery.min.js"></script>
+    <script src="../bootstrap3/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<!--悬浮球-->
+<ul id="menu" class="mfb-component--br mfb-zoomin" data-mfb-toggle="hover">
+    <li class="mfb-component__wrap">
+        <p id="submit" data-mfb-label="提交数据" class="mfb-component__button--main">
+            <i class="fa fa-send" aria-hidden="true"></i>
+        </p>
+<!--        <ul class="mfb-component__list">
+            <li>
+                <a href="#" id="submit-smart" data-mfb-label="一键智能模式" class="mfb-component__button&#45;&#45;child">
+                    <i class="fa fa-cloud" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>-->
+    </li>
+</ul>
+<!--头部-->
+<header id="header01">
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">About</h4>
+                    <p class="text-muted">天阶夜色凉如水，坐看牵牛织女家</p>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Welcome</h4>
+                    <ul class="list-unstyled">
+                        <li><label class="col-sm-1 control-label" id="client-uid" style="display: none"></label></li>
+                        <li><label class="col-sm-12 control-label" id="client-username"
+                                   style="color: white">这里是用户名</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                          d="M2 13.5V7h1v6.5a.5.5 0 00.5.5h9a.5.5 0 00.5-.5V7h1v6.5a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 012 13.5zm11-11V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z"
+                          clip-rule="evenodd"/>
+                    <path fill-rule="evenodd"
+                          d="M7.293 1.5a1 1 0 011.414 0l6.647 6.646a.5.5 0 01-.708.708L8 2.207 1.354 8.854a.5.5 0 11-.708-.708L7.293 1.5z"
+                          clip-rule="evenodd"/>
+                </svg>
+                <strong>SmartHome</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="client-dashboard_tem.html">
+                            <svg class="bi bi-brightness-high" width="1em" height="1em" viewBox="0 0 16 16"
+                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M8 11a3 3 0 100-6 3 3 0 000 6zm0 1a4 4 0 100-8 4 4 0 000 8zM8 0a.5.5 0 01.5.5v2a.5.5 0 01-1 0v-2A.5.5 0 018 0zm0 13a.5.5 0 01.5.5v2a.5.5 0 01-1 0v-2A.5.5 0 018 13zm8-5a.5.5 0 01-.5.5h-2a.5.5 0 010-1h2a.5.5 0 01.5.5zM3 8a.5.5 0 01-.5.5h-2a.5.5 0 010-1h2A.5.5 0 013 8zm10.657-5.657a.5.5 0 010 .707l-1.414 1.415a.5.5 0 11-.707-.708l1.414-1.414a.5.5 0 01.707 0zm-9.193 9.193a.5.5 0 010 .707L3.05 13.657a.5.5 0 01-.707-.707l1.414-1.414a.5.5 0 01.707 0zm9.193 2.121a.5.5 0 01-.707 0l-1.414-1.414a.5.5 0 01.707-.707l1.414 1.414a.5.5 0 010 .707zM4.464 4.465a.5.5 0 01-.707 0L2.343 3.05a.5.5 0 11.707-.707l1.414 1.414a.5.5 0 010 .708z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                            Dashboard -℃ <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="client-dashboard_hum.html">
+                            <svg class="bi bi-droplet-half" width="1em" height="1em" viewBox="0 0 16 16"
+                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 01-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 005.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0010 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"
+                                      clip-rule="evenodd"/>
+                                <path fill-rule="evenodd"
+                                      d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"
+                                      clip-rule="evenodd"/>
+                                <path d="M14 10a6 6 0 01-12 0s2.5 2.5 6.5.5S14 10 14 10z"/>
+                            </svg>
+                            Dashboard -%
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-home">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                            Circumstances
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-shopping-cart">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-users">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            Friends
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-layers">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                            Integrations
+                        </a>
+                    </li>
+                </ul>
+
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Saved reports</span>
+                    <a class="d-flex align-items-center text-muted"
+                       href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-plus-circle">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                    </a>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-file-text">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Current month
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-file-text">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Last quarter
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round" class="feather feather-file-text">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Social engagement
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+            <section class="jumbotron text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--环形进度条-->
+                        <div class="progress01"></div>
+                        <!--<input id="value-input-Tem" type="range" max="40" value="12">-->
+                        <label style="font-size: 40px;display: none" class="col-sm-1 control-label"
+                               id="temperature">21</label>
+                    </div>
+                    <div class="col-md-6">
+                        <!--环形进度条-->
+                        <div class="container">
+                            <div class="donut-chart-block block">
+                                <div class="donut-chart">
+                                    <div id="section1" class="clip">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div id="section2" class="clip">
+                                        <div class="item"></div>
+                                    </div>
+                                    <div id="section3" class="clip" style="transform: rotate(180deg);">
+                                        <div class="item"
+                                             style="transform: rotate(0deg); background-color: rgb(230, 76, 101);"></div>
+                                    </div>
+                                    <div class="center">
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="range-slider" style="display: none">
+                                <input type="range" orient="vertical" min="0" max="100">
+                                <div class="range-slider__bar" style="height: calc(45% + 15px);"></div>
+                                <div class="range-slider__thumb" style="bottom: 45%;"></div>
+                            </div>
+                        </div>
+                        <label style="font-size: 40px;display: none" class="col-sm-1 control-label"
+                               id="humidity"></label>
+                    </div>
+                </div>
+            </section>
+
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <!--空调-->
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                     focusable="false"
+                                     role="img" aria-label="Placeholder: Thumbnail"><title>空调</title>
+                                    <rect width="100%" height="100%" fill="#55599c"/>
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">空调</text>
+                                </svg>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <select class="form-control-static" id="airMode">
+                                                <option>空调模式</option>
+                                                <option>&nbsp;&nbsp;&nbsp;制热</option>
+                                                <option>&nbsp;&nbsp;&nbsp;制冷</option>
+                                                <option>&nbsp;&nbsp;&nbsp;调湿</option>
+                                            </select>
+                                            <select class="form-control-static" id="airWindSpeed">
+                                                <option>空调风速</option>
+                                                <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大</option>
+                                                <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中</option>
+                                                <option>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小</option>
+                                            </select>
+                                            <input class="col-md-3" type="number" id="airTemperature" min="16" max="30">
+                                            <big>&nbsp;<sup>°</sup>C</big>
+                                        </div>
+                                        <svg class="bi bi-credit-card" width="1em" height="1em" viewBox="0 0 16 16"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M14 3H2a1 1 0 00-1 1v8a1 1 0 001 1h12a1 1 0 001-1V4a1 1 0 00-1-1zM2 2a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H2z"
+                                                  clip-rule="evenodd"/>
+                                            <rect width="3" height="3" x="2" y="9" rx="1"/>
+                                            <path d="M1 5h14v2H1z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!--厨房灯-->
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                     focusable="false"
+                                     role="img" aria-label="Placeholder: Thumbnail"><title>厨房灯</title>
+                                    <rect width="100%" height="100%" fill="#CCCC66"/>
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">厨房灯</text>
+                                </svg>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <select class="form-control-static" id="lamp1">
+                                                <option>&nbsp;开关</option>
+                                                <option>&nbsp;开灯</option>
+                                                <option>&nbsp;关灯</option>
+                                            </select>
+                                        </div>
+                                        <svg class="bi bi-egg-fried" width="1em" height="1em" viewBox="0 0 16 16"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M13.665 6.113a1 1 0 01-.667-.977L13 5a4 4 0 00-6.483-3.136 1 1 0 01-.8.2 4 4 0 00-3.693 6.61 1 1 0 01.2 1 4 4 0 006.67 4.087 1 1 0 011.262-.152 2.5 2.5 0 003.715-2.905 1 1 0 01.341-1.113 2.001 2.001 0 00-.547-3.478zM14 5c0 .057 0 .113-.003.17a3.001 3.001 0 01.822 5.216 3.5 3.5 0 01-5.201 4.065 5 5 0 01-8.336-5.109A5 5 0 015.896 1.08 5 5 0 0114 5z"
+                                                  clip-rule="evenodd"/>
+                                            <circle cx="8" cy="8" r="3"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!--卫生间灯-->
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                     focusable="false"
+                                     role="img" aria-label="Placeholder: Thumbnail"><title>卫生间灯</title>
+                                    <rect width="100%" height="100%" fill="#3366FF"/>
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">卫生间灯</text>
+                                </svg>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <select class="form-control-static" id="lamp2">
+                                                <option>&nbsp;开关</option>
+                                                <option>&nbsp;开灯</option>
+                                                <option>&nbsp;关灯</option>
+                                            </select>
+                                        </div>
+                                        <svg class="bi bi-droplet-half" width="1em" height="1em" viewBox="0 0 16 16"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M7.21.8C7.69.295 8 0 8 0c.109.363.234.708.371 1.038.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 01-12 0C2 6.668 5.58 2.517 7.21.8zm.413 1.021A31.25 31.25 0 005.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0010 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"
+                                                  clip-rule="evenodd"/>
+                                            <path fill-rule="evenodd"
+                                                  d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448z"
+                                                  clip-rule="evenodd"/>
+                                            <path d="M14 10a6 6 0 01-12 0s2.5 2.5 6.5.5S14 10 14 10z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <!--卧室灯-->
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                     focusable="false"
+                                     role="img" aria-label="Placeholder: Thumbnail"><title>卧室灯</title>
+                                    <rect width="100%" height="100%" fill="#FF9933"/>
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">卧室灯</text>
+                                </svg>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <input class="col-md-9" type="number" id="lamp3" min="0" max="100">
+                                        </div>
+                                        <svg class="bi bi-moon" width="1em" height="1em" viewBox="0 0 16 16"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M14.53 10.53a7 7 0 01-9.058-9.058A7.003 7.003 0 008 15a7.002 7.002 0 006.53-4.47z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!--客厅灯-->
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                     focusable="false"
+                                     role="img" aria-label="Placeholder: Thumbnail"><title>客厅灯</title>
+                                    <rect width="100%" height="100%" fill="#CC6666"/>
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">客厅灯</text>
+                                </svg>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <input class="col-md-9" type="number" id="lamp4" min="0" max="100">
+                                        </div>
+                                        <svg class="bi bi-display-fill" width="1em" height="1em" viewBox="0 0 16 16"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.75 13.5c.167-.333.25-.833.25-1.5h4c0 .667.083 1.167.25 1.5H11a.5.5 0 010 1H5a.5.5 0 010-1h.75z"/>
+                                            <path fill-rule="evenodd"
+                                                  d="M13.991 3H2c-.325 0-.502.078-.602.145a.758.758 0 00-.254.302A1.46 1.46 0 001 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 00.538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 00.254-.302 1.464 1.464 0 00.143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 00-.302-.254A1.46 1.46 0 0013.99 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"
+                                                  clip-rule="evenodd"/>
+                                            <path d="M2 4h12v6H2z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <!--门窗磁-->
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
+                                     focusable="false"
+                                     role="img" aria-label="Placeholder: Thumbnail"><title>门窗磁</title>
+                                    <rect width="100%" height="100%" fill="#55595c"/>
+                                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">门窗磁</text>
+                                </svg>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <select class="form-control-static" id="windowMode">
+                                                <option>&nbsp;开关</option>
+                                                <option>&nbsp;开窗</option>
+                                                <option>&nbsp;关窗</option>
+                                            </select>
+                                        </div>
+                                        <svg class="bi bi-map" width="1em" height="1em" viewBox="0 0 16 16"
+                                             fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M15.817.613A.5.5 0 0116 1v13a.5.5 0 01-.402.49l-5 1a.502.502 0 01-.196 0L5.5 14.51l-4.902.98A.5.5 0 010 15V2a.5.5 0 01.402-.49l5-1a.5.5 0 01.196 0l4.902.98 4.902-.98a.5.5 0 01.415.103zM10 2.41l-4-.8v11.98l4 .8V2.41zm1 11.98l4-.8V1.61l-4 .8v11.98zm-6-.8V1.61l-4 .8v11.98l4-.8z"
+                                                  clip-rule="evenodd"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<footer class="footer" style="color: black;background-color: #f8f9fa">
+    <!-- 页面底部-备案号 #footer -->
+    <div class="col-md-12 text-center bottom">
+        Copyright © 2020 ytu.cn All Rights Reserved 京ICP备08000888号-88 <a>未来科技集团有限公司</a> 版权所有
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="../bootstrap3/jquery.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/bootstrap.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/holder.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/css3-mediaqueries.js"></script>
+<script type="text/javascript" src="../bootstrap3/js/respond.min.js"></script>
+<script type="text/javascript" src="../js/client.js"></script>
+<script type="text/javascript" src="../js/circle-progress01.js"></script>
+<script type="text/javascript" src="../js/circle-progress02.js"></script>
+<script type="text/javascript" src="../js/circle-progress11.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        showUserInfo();
+    });
+
+    function showUserInfo() {
+        $.ajax({
+            "url": "/users/get_by_uid",
+            "type": "get",
+            "dataType": "json",
+            "success": function (json) {
+                if (json.state == 2000) {
+                    //$("#temperature").text(json.data.temperature);
+                    //$("#humidity").text(json.data.humidity);
+                    $("#client-uid").text(json.data.uid);
+                    $("#client-username").text(json.data.username);
+                    $("#airMode").val(json.data.airMode);
+                    $("#airTemperature").val(json.data.airTemperature);
+                    $("#airWindSpeed").val(json.data.airWindSpeed);
+                    $("#lamp1").val(json.data.lamp1);
+                    $("#lamp2").val(json.data.lamp2);
+                    $("#lamp3").val(json.data.lamp3);
+                    $("#lamp4").val(json.data.lamp4);
+                    $("#windowMode").val(json.data.windowMode);
+                } else {
+                    alert(json.message);
+                }
+            }
+        });
+    }
+</script>
+</html>
