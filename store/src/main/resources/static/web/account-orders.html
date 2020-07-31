@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>历史订单</title>
+    <!-- Mobile Specific Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/font-awesome.min.css">
+    <!-- Feather Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/feather-icons.css">
+    <!-- Pixeden Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/pixeden.css">
+    <!-- Social Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/socicon.css">
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/photoswipe.css">
+    <!-- Izitoast Notification CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/izitoast.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/style.css">
+</head>
+<!-- Start TopBar -->
+<div class="topbar">
+    <div class="topbar-column">
+        <a class="hidden-md-down" href="#"><i class="fa fa-phone">CHINA</i></a>
+    </div>
+    <div class="topbar-column">
+        <div class="lang-currency-switcher-wrap">
+            <span class="currency">￥ RMB</span>
+        </div>
+    </div>
+</div>
+<!-- End TopBar -->
+<!-- Start NavBar -->
+<header class="navbar navbar-sticky">
+    <!-- Start Search -->
+    <form class="site-search" method="get">
+        <input type="text" name="site_search" placeholder="输入商品名称进行搜索...">
+        <div class="search-tools">
+            <span class="clear-search">键入回车进行搜索</span>
+            <span class="close-search"><i class="icon-cross"></i></span>
+        </div>
+    </form>
+    <!-- End Search -->
+    <!-- Start Logo -->
+    <div class="site-branding">
+        <div class="inner">
+            <a class="site-logo" href="index.html"><img src="../assets/images/logo/logo.png" alt="Inspina"></a>
+        </div>
+    </div>
+    <!-- End Logo -->
+    <!-- Start Nav Menu -->
+    <nav class="site-menu">
+        <ul>
+            <li class="active">
+                <a href="index.html"><span>首页</span></a>
+            </li>
+            <li>
+                <a href="#"><span>闪购</span></a>
+            </li>
+            <li>
+                <a href="#"><span>品类精选直达</span></a>
+            </li>
+            <li>
+                <a href="#"><span>超市</span></a>
+            </li>
+            <li>
+                <a href="#"><span>生鲜</span></a>
+            </li>
+            <li>
+                <a href="#"><span>优惠券</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Nav Menu -->
+    <!-- Start Toolbar -->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <div class="search"><i class="icon-search"></i></div>
+                <!-- Start Account -->
+                <div class="account">
+                    <a href="#"></a><i class="icon-head"></i>
+                    <ul class="toolbar-dropdown">
+                        <li class="sub-menu-user">
+                            <div class="user-ava">
+                                <img src="../assets/images/account/user-ava-sm.jpg" alt="">
+                            </div>
+                            <div class="user-info">
+                                <h6 class="user-name">Welcome~</h6>
+                            </div>
+                        </li>
+                        <li><a href="account-profile.html">个 人 资 料</a></li>
+                        <li><a href="account-password-recovery.html">找 回 密 码</a></li>
+                        <li><a href="account-address.html">收 货 地 址</a></li>
+                        <li><a href="account-orders.html">历 史 订 单</a></li>
+                        <li class="sub-menu-separator"></li>
+                        <li><a href="account-login.html">登 录&nbsp;&&nbsp;注 册</a></li>
+                    </ul>
+                </div>
+                <!-- End Account -->
+                <!-- Start Cart -->
+                <div class="cart">
+                    <a href="#"></a>
+                    <i class="icon-bag"></i>
+                    <div class="toolbar-dropdown">
+                        <div class="toolbar-dropdown-group">
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-secondary" href="cart.html">查看购物车</a>
+                            </div>
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-success" href="checkout-address.html">结算购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Cart -->
+            </div>
+        </div>
+    </div>
+    <!-- End Toolbar -->
+</header>
+<!-- End NavBar -->
+<div class="offcanvas-wrapper">
+    <!-- Start Page Title -->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>历史订单</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li>历史订单</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title -->
+    <!-- Start My Orders -->
+    <div class="container padding-top-1x padding-bottom-3x">
+        <div class="row">
+            <div class="col-lg-4">
+                <aside class="user-info-wrapper">
+                    <div class="user-cover account-details">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-avatar"><a class="edit-avatar" href="#"></a><img src="../assets/images/account/user-ava-md.jpg" alt="User"></div>
+                        <div class="user-data">
+                            <h4>Welcome~</h4>
+                        </div>
+                    </div>
+                </aside>
+                <nav class="list-group">
+                    <a class="list-group-item" href="account-profile.html"><i class="icon-head"></i>个人资料</a>
+                    <a class="list-group-item active with-badge" href="account-orders.html"><i class="icon-bag"></i>历史订单</a>
+                    <a class="list-group-item" href="account-address.html"><i class="icon-map"></i>收货地址</a>
+                </nav>
+            </div>
+            <div class="col-lg-8">
+                <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>订单号</th>
+                            <th>购买日期</th>
+                            <th>状态</th>
+                            <th>总额(￥)</th>
+                        </tr>
+                        </thead>
+                        <tbody id="order-list">
+                        <tr>
+                            <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">78A643CD409</a></td>
+                            <td>April 13, 2018</td>
+                            <td><span class="text-danger">Canceled</span></td>
+                            <td><span class="text-medium">$450.00</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">34VB5540K83</a></td>
+                            <td>March 21, 2018</td>
+                            <td><span class="text-info">In Progress</span></td>
+                            <td><span class="text-medium">$125.99</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">112P45A90V2</a></td>
+                            <td>March 09, 2018</td>
+                            <td><span class="text-warning">Delayed</span></td>
+                            <td><span class="text-medium">$230.00</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">28BA67U0981</a></td>
+                            <td>Febrary 19, 2018</td>
+                            <td><span class="text-success">Delivered</span></td>
+                            <td><span class="text-medium">$400.00</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">502TR872W2</a></td>
+                            <td>Febrary 04, 2018</td>
+                            <td><span class="text-success">Delivered</span></td>
+                            <td><span class="text-medium">$560.00</span></td>
+                        </tr>
+                        <tr>
+                            <td><a class="text-medium navi-link" href="#" data-toggle="modal" data-target="#orderDetails">47H76G09F33</a></td>
+                            <td>January 23, 2018</td>
+                            <td><span class="text-success">Delivered</span></td>
+                            <td><span class="text-medium">$360.00</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End My Orders -->
+    <!-- Start Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Start Copyright -->
+            <p class="footer-copyright text-center">© 2020 lihao | All rights <a href="">Reserved</a></p>
+            <!-- End Copyright -->
+        </div>
+    </footer>
+    <!-- End Footer -->
+</div>
+<!-- Start Back To Top -->
+<a class="scroll-to-top-btn" href="#">
+    <i class="icon-arrow-up"></i>
+</a>
+<!-- End Back To Top -->
+<div class="site-backdrop"></div>
+<!-- Modernizr JS -->
+<script src="../assets/js/modernizr.min.js"></script>
+<!-- JQuery JS -->
+<script src="../assets/js/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="../assets/js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- CountDown JS -->
+<script src="../assets/js/count.min.js"></script>
+<!-- Gmap JS -->
+<script src="../assets/js/gmap.min.js"></script>
+<!-- ImageLoader JS -->
+<script src="../assets/js/imageloader.min.js"></script>
+<!-- Isotope JS -->
+<script src="../assets/js/isotope.min.js"></script>
+<!-- NouiSlider JS -->
+<script src="../assets/js/nouislider.min.js"></script>
+<!-- OwlCarousel JS -->
+<script src="../assets/js/owl.carousel.min.js"></script>
+<!-- PhotoSwipe UI JS -->
+<script src="../assets/js/photoswipe-ui-default.min.js"></script>
+<!-- PhotoSwipe JS -->
+<script src="../assets/js/photoswipe.min.js"></script>
+<!-- Velocity JS -->
+<script src="../assets/js/velocity.min.js"></script>
+<!-- Main JS -->
+<script src="../assets/js/script.js"></script><script src="../assets/js/custom.js"></script>
+<script src="../assets/myjs/client-order.js"></script>
+</body>
+</html>

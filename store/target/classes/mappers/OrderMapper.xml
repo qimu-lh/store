@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ytu.store.mapper.OrderMapper">
+
+    <resultMap id="OrderUserEntityMap" type="com.ytu.store.entity.OrderUser">
+        <id column="oid" property="oid" />
+        <result column="uid" property="uid" />
+        <result column="recv_name" property="recvName" />
+        <result column="recv_phone" property="recvPhone" />
+        <result column="recv_email" property="recvEmail" />
+        <result column="recv_address" property="recvAddress" />
+        <result column="total_price" property="totalPrice" />
+        <result column="pay" property="pay" />
+        <result column="state" property="state" />
+        <result column="order_time" property="orderTime" />
+        <result column="pay_time" property="payTime" />
+        <result column="created_user" property="createdUser" />
+        <result column="created_time" property="createdTime" />
+        <result column="modified_user" property="modifiedUser" />
+        <result column="modified_time" property="modifiedTime" />
+    </resultMap>
+
+    <resultMap id="OrderItemEntityMap" type="com.ytu.store.entity.OrderItem">
+        <id column="id" property="id" />
+        <result column="oid" property="oid" />
+        <result column="pid" property="pid" />
+        <result column="name" property="name" />
+        <result column="image" property="image" />
+        <result column="price" property="price" />
+        <result column="num" property="num" />
+        <result column="created_user" property="createdUser" />
+        <result column="created_time" property="createdTime" />
+        <result column="modified_user" property="modifiedUser" />
+        <result column="modified_time" property="modifiedTime" />
+    </resultMap>
+
+    <!-- 插入订单数据 -->
+    <!-- Integer insertOrder(Order order) -->
+    <insert id="insertOrderUser" useGeneratedKeys="true" keyProperty="oid">
+            INSERT INTO order_user (
+                uid, recv_name,
+                recv_phone, recv_email,recv_address,
+                total_price, pay,state,
+                order_time, pay_time,
+                created_user, created_time,
+                modified_user, modified_time
+            ) VALUES (
+                #{uid}, #{recvName},
+                #{recvPhone}, #{recvEmail},#{recvAddress},
+                #{totalPrice}, #{pay},#{state},
+                #{orderTime}, #{payTime},
+                #{createdUser}, #{createdTime},
+                #{modifiedUser}, #{modifiedTime}
+            )
+    </insert>
+
+    <!-- 插入订单商品数据 -->
+    <!-- Integer insertOrderItem(OrderItem orderItem) -->
+    <insert id="insertOrderItem" useGeneratedKeys="true" keyProperty="id">
+            INSERT INTO order_item (
+                oid, pid,
+                name, image,
+                price, num,
+                created_user, created_time,
+                modified_user, modified_time
+            ) VALUES (
+                #{oid}, #{pid},
+                #{name}, #{image},
+                #{price}, #{num},
+                #{createdUser}, #{createdTime},
+                #{modifiedUser}, #{modifiedTime}
+            )
+    </insert>
+
+    <!--Integer updateState(Integer oid,String state);-->
+    <update id="updateState">
+        UPDATE
+            order_user
+        SET
+            state=#{state}
+        WHERE
+            oid=#{oid}
+    </update>
+
+    <!--List<OrderUser> findByUid(Integer uid);-->
+    <select id="findOrders" resultMap="OrderUserEntityMap">
+        SELECT
+        *
+        FROM
+        order_user
+        ORDER BY oid DESC
+    </select>
+
+    <!--List<OrderUser> findOrdersByUid(Integer uid);-->
+    <select id="findOrdersByUid" resultMap="OrderUserEntityMap">
+        SELECT
+        *
+        FROM
+        order_user
+        WHERE
+        uid=#{uid}
+        ORDER BY oid DESC
+    </select>
+
+   <!-- OrderUser findSalesByState(String state);-->
+    <select id="findSalesByState" resultType="java.lang.Integer">
+        SELECT
+        COALESCE(SUM(total_price),0) AS sales
+        FROM
+        order_user
+        WHERE
+        state="Delivered"
+    </select>
+
+    <!--List<OrderItem> findOrderItemByOid(Integer oid);-->
+    <select id="findOrderItemByOid" resultMap="OrderItemEntityMap">
+        SELECT
+            *
+        FROM
+            order_item
+        WHERE
+            oid=#{oid}
+    </select>
+
+    <!--OrderUser findOrderUserByOid(Integer oid);-->
+    <select id="findOrderUserByOid" resultMap="OrderUserEntityMap">
+        SELECT
+            *
+        FROM
+            order_user
+        WHERE
+            oid=#{oid}
+    </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>商品操作</title>
+    <!-- Mobile Specific Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/font-awesome.min.css">
+    <!-- Feather Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/feather-icons.css">
+    <!-- Pixeden Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/pixeden.css">
+    <!-- Social Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/socicon.css">
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/photoswipe.css">
+    <!-- Izitoast Notification CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/izitoast.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/style.css">
+</head>
+<body>
+<!-- Start TopBar -->
+<div class="topbar">
+    <div class="topbar-column">
+        <a class="hidden-md-down" href="#"><i class="fa fa-phone">CHINA</i></a>
+    </div>
+    <div class="topbar-column">
+        <div class="lang-currency-switcher-wrap">
+            <span class="currency">￥ RMB</span>
+        </div>
+    </div>
+</div>
+<!-- End TopBar -->
+<!-- Start NavBar -->
+<header class="navbar navbar-sticky">
+    <!-- Start Search -->
+    <form class="site-search" method="get">
+        <input type="text" name="site_search" placeholder="输入商品名称进行搜索...">
+        <div class="search-tools">
+            <span class="clear-search">键入回车进行搜索</span>
+            <span class="close-search"><i class="icon-cross"></i></span>
+        </div>
+    </form>
+    <!-- End Search -->
+    <!-- Start Logo -->
+    <div class="site-branding">
+        <div class="inner">
+            <a class="site-logo" href="index.html"><img src="../assets/images/logo/logo.png" alt="Inspina"></a>
+        </div>
+    </div>
+    <!-- End Logo -->
+    <!-- Start Nav Menu -->
+    <nav class="site-menu">
+        <ul>
+            <li>
+                <a href="supplier-login.html"><span>供应商登录</span></a>
+            </li>
+            <li>
+                <a href="supplier-orders.html"><span>订单管理</span></a>
+            </li>
+            <li>
+                <a href="supplier-inventory.html"><span>库存管理</span></a>
+            </li>
+            <li class="active">
+                <a href="supplier-goods.html"><span>商品操作</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;&nbsp;</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Nav Menu -->
+    <!-- Start Toolbar -->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <div class="search"><i class="icon-search"></i></div>
+                <!-- Start Account -->
+                <div class="account">
+                    <a href="#"></a><i class="icon-head"></i>
+                    <ul class="toolbar-dropdown">
+                        <li class="sub-menu-user">
+                            <div class="user-ava">
+                                <img src="../assets/images/account/supplier-ava-lg.jpg">
+                            </div>
+                            <div class="user-info">
+                                <h6 class="user-name">Naruto</h6>
+                            </div>
+                        </li>
+                        <li><a href="supplier-orders.html">订 单 管 理</a></li>
+                        <li><a href="supplier-inventory.html">库 存 管 理</a></li>
+                        <li><a href="supplier-goods.html">商 品 操 作</a></li>
+                        <li class="sub-menu-separator"></li>
+                    </ul>
+                </div>
+                <!-- End Account -->
+                <!-- Start Cart -->
+                <div class="cart">
+                    <a href="#"></a>
+                    <i class="icon-bag"></i>
+                    <div class="toolbar-dropdown">
+                        <div class="toolbar-dropdown-group">
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-success" href="supplier-inventory.html">库存管理</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Cart -->
+            </div>
+        </div>
+    </div>
+    <!-- End Toolbar -->
+</header>
+<!-- End NavBar -->
+<div class="offcanvas-wrapper">
+    <!-- Start Page Title -->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>商品操作</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li><a href="">供应商订单管理</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li>商品操作</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title -->
+    <!-- Start Contacts & Shipping Address -->
+    <div class="container padding-top-1x padding-bottom-3x">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="padding-top-2x mt-2 hidden-lg-up"></div>
+                <h4>商品信息</h4>
+                <hr class="padding-bottom-1x">
+                <form class="row" id="form-product-add">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>商品名称</label>
+                            <input name="name" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>商品数量</label>
+                            <input name="num" class="form-control" type="number">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>商品价格(￥)</label>
+                            <input name="price" class="form-control" type="number">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>详细信息</label>
+                            <input name="information" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>商品图片名称（有格式后缀）</label>
+                            <input name="image" class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="col-12 padding-top-1x">
+                        <hr class="margin-top-1x margin-bottom-1x">
+                        <div class="text-right">
+                            <button id="btn-product-add" class="btn btn-primary margin-bottom-none" type="button" data-toast data-toast-position="topRight" data-toast-type="success" data-toast-icon="icon-circle-check" data-toast-title="Success!" data-toast-message="商品信息保存成功！">保存</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Contacts & Shipping Address -->
+    <!-- Start Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Start Copyright -->
+            <p class="footer-copyright text-center">© 2020 lihao | All rights <a href="">Reserved</a></p>
+            <!-- End Copyright -->
+        </div>
+    </footer>
+    <!-- End Footer -->
+</div>
+<!-- Start Back To Top -->
+<a class="scroll-to-top-btn" href="#">
+    <i class="icon-arrow-up"></i>
+</a>
+<!-- End Back To Top -->
+<div class="site-backdrop"></div>
+<!-- Modernizr JS -->
+<script src="../assets/js/modernizr.min.js"></script>
+<!-- JQuery JS -->
+<script src="../assets/js/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="../assets/js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- CountDown JS -->
+<script src="../assets/js/count.min.js"></script>
+<!-- Gmap JS -->
+<script src="../assets/js/gmap.min.js"></script>
+<!-- ImageLoader JS -->
+<script src="../assets/js/imageloader.min.js"></script>
+<!-- Isotope JS -->
+<script src="../assets/js/isotope.min.js"></script>
+<!-- NouiSlider JS -->
+<script src="../assets/js/nouislider.min.js"></script>
+<!-- OwlCarousel JS -->
+<script src="../assets/js/owl.carousel.min.js"></script>
+<!-- PhotoSwipe UI JS -->
+<script src="../assets/js/photoswipe-ui-default.min.js"></script>
+<!-- PhotoSwipe JS -->
+<script src="../assets/js/photoswipe.min.js"></script>
+<!-- Velocity JS -->
+<script src="../assets/js/velocity.min.js"></script>
+<!-- Main JS -->
+<script src="../assets/js/script.js"></script><script src="../assets/js/custom.js"></script>
+<script src="../assets/myjs/supplier-goods.js"></script>
+</body>
+</html>

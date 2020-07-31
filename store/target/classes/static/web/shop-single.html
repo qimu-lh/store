@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>商品详情</title>
+    <!-- Mobile Specific Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/font-awesome.min.css">
+    <!-- Feather Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/feather-icons.css">
+    <!-- Pixeden Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/pixeden.css">
+    <!-- Social Icons CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/socicon.css">
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/photoswipe.css">
+    <!-- Izitoast Notification CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/izitoast.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" media="screen" href="../assets/css/style.css">
+</head>
+<body>
+<!-- Start TopBar -->
+<div class="topbar">
+    <div class="topbar-column">
+        <a class="hidden-md-down" href="#"><i class="fa fa-phone">CHINA</i></a>
+    </div>
+    <div class="topbar-column">
+        <div class="lang-currency-switcher-wrap">
+            <span class="currency">￥ RMB</span>
+        </div>
+    </div>
+</div>
+<!-- End TopBar -->
+<!-- Start NavBar -->
+<header class="navbar navbar-sticky">
+    <!-- Start Search -->
+    <form class="site-search" method="get">
+        <input type="text" name="site_search" placeholder="输入商品名称进行搜索...">
+        <div class="search-tools">
+            <span class="clear-search">键入回车进行搜索</span>
+            <span class="close-search"><i class="icon-cross"></i></span>
+        </div>
+    </form>
+    <!-- End Search -->
+    <!-- Start Logo -->
+    <div class="site-branding">
+        <div class="inner">
+            <a class="site-logo" href="index.html"><img src="../assets/images/logo/logo.png" alt="Inspina"></a>
+        </div>
+    </div>
+    <!-- End Logo -->
+    <!-- Start Nav Menu -->
+    <nav class="site-menu">
+        <ul>
+            <li class="active">
+                <a href="index.html"><span>首页</span></a>
+            </li>
+            <li>
+                <a href="#"><span>闪购</span></a>
+            </li>
+            <li>
+                <a href="#"><span>品类精选直达</span></a>
+            </li>
+            <li>
+                <a href="#"><span>超市</span></a>
+            </li>
+            <li>
+                <a href="#"><span>生鲜</span></a>
+            </li>
+            <li>
+                <a href="#"><span>优惠券</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Nav Menu -->
+    <!-- Start Toolbar -->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <div class="search"><i class="icon-search"></i></div>
+                <!-- Start Account -->
+                <div class="account">
+                    <a href="#"></a><i class="icon-head"></i>
+                    <ul class="toolbar-dropdown">
+                        <li class="sub-menu-user">
+                            <div class="user-ava">
+                                <img src="../assets/images/account/user-ava-sm.jpg" alt="">
+                            </div>
+                            <div class="user-info">
+                                <h6 class="user-name">Welcome~</h6>
+                            </div>
+                        </li>
+                        <li><a href="account-profile.html">个 人 资 料</a></li>
+                        <li><a href="account-password-recovery.html">找 回 密 码</a></li>
+                        <li><a href="account-address.html">收 货 地 址</a></li>
+                        <li><a href="account-orders.html">历 史 订 单</a></li>
+                        <li class="sub-menu-separator"></li>
+                        <li><a href="account-login.html">登 录&nbsp;&&nbsp;注 册</a></li>
+                    </ul>
+                </div>
+                <!-- End Account -->
+                <!-- Start Cart -->
+                <div class="cart">
+                    <a href="#"></a>
+                    <i class="icon-bag"></i>
+                    <div class="toolbar-dropdown">
+                        <div class="toolbar-dropdown-group">
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-secondary" href="cart.html">查看购物车</a>
+                            </div>
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-success" href="checkout-address.html">结算购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Cart -->
+            </div>
+        </div>
+    </div>
+    <!-- End Toolbar -->
+</header>
+<!-- End NavBar -->
+<div class="offcanvas-wrapper">
+    <!-- Start Page Title -->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>商品详细信息</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li>商品详细信息</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title -->
+    <!-- Start Product Content -->
+    <div class="container padding-top-1x padding-bottom-3x">
+        <div class="row">
+            <!-- Start Product Gallery -->
+            <div class="col-md-6">
+                <div class="product-gallery"><span class="product-badge text-danger">20% Off</span>
+                    <div class="gallery-wrapper">
+                        <div class="gallery-item active"><a id="products-image-1-big" href="../assets/images/shop/single/01.jpg" data-hash="one" data-size="1000x667"></a></div>
+                        <div class="gallery-item"><a id="products-image-2-big"  href="../assets/images/shop/single/02.jpg" data-hash="two" data-size="1000x667"></a></div>
+                        <div class="gallery-item"><a id="products-image-3-big"  href="../assets/images/shop/single/03.jpg" data-hash="three" data-size="1000x667"></a></div>
+                        <div class="gallery-item"><a id="products-image-4-big"  href="../assets/images/shop/single/04.jpg" data-hash="four" data-size="1000x667"></a></div>
+                        <div class="gallery-item"><a id="products-image-5-big"  href="../assets/images/shop/single/05.jpg" data-hash="five" data-size="1000x667"></a></div>
+                    </div>
+                    <div class="product-carousel owl-carousel">
+                        <div data-hash="one"><img id="products-image-1-md"  src="../assets/images/shop/single/01.jpg" alt="Product"></div>
+                        <div data-hash="two"><img id="products-image-2-md"  src="../assets/images/shop/single/02.jpg" alt="Product"></div>
+                        <div data-hash="three"><img id="products-image-3-md"  src="../assets/images/shop/single/03.jpg" alt="Product"></div>
+                        <div data-hash="four"><img id="products-image-4-md"  src="../assets/images/shop/single/04.jpg" alt="Product"></div>
+                        <div data-hash="five"><img id="products-image-5-md"  src="../assets/images/shop/single/05.jpg" alt="Product"></div>
+                    </div>
+                    <ul class="product-thumbnails">
+                        <li class="active"><a href="#one"><img id="products-image-1-sm"  src="../assets/images/shop/single/01.jpg" alt="Product"></a></li>
+                        <li><a href="#two"><img id="products-image-2-sm"  src="../assets/images/shop/single/02.jpg" alt="Product"></a></li>
+                        <li><a href="#three"><img id="products-image-3-sm"  src="../assets/images/shop/single/03.jpg" alt="Product"></a></li>
+                        <li><a href="#four"><img id="products-image-4-sm"  src="../assets/images/shop/single/04.jpg" alt="Product"></a></li>
+                        <li><a href="#five"><img id="products-image-5-sm"  src="../assets/images/shop/single/05.jpg" alt="Product"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Product Gallery -->
+            <!-- Start Product Info -->
+            <div class="col-md-6 single-shop">
+                <div class="hidden-md-up"></div>
+                <div class="rating-stars">
+                    <i class="icon-star filled"></i>
+                    <i class="icon-star filled"></i>
+                    <i class="icon-star filled"></i>
+                    <i class="icon-star filled"></i>
+                    <i class="icon-star filled"></i>
+                </div>
+                <span class="text-muted align-middle">&nbsp;&nbsp;5 | 13w 浏览量</span>
+                <h2 id="products-name" class="padding-top-1x text-normal with-side">iPhone 11 Pro Max 128GB</h2>
+                <span id="products-price" class="h2 d-block with-side">￥7749.60</span>
+                <p id="products-information">商品描述</p>
+               <!-- <h3>4K 视频</h3>
+                <h4>可横可竖，可近可远，可裁可剪，可明可暗，很可以。</h4>
+                <p>用 iPhone 11 Pro 拍摄的视频格外赏心悦目，不仅画面栩栩如生，细节更加丰富，动作也更流畅。它有澎湃的处理能力，能使用扩展的动态范围和影院级防抖功能，以 60 fps 拍摄 4K 视频。另外，利用四倍的取景范围和强大的全新编辑工具，你还能随意挥洒灵感，玩出各种花样。</p>
+                <p>如果无法让拍摄的对象全部收进画面，那就将镜头拉远。因为全新的超广角摄像头取景范围达到四倍，可拍摄更广的场景，所以你即使站在原地不动，也能实现后退、再后退的取景效果。下一次，把那些连绵的大山、高耸的教堂和壮丽的天际，全都收进来吧。</p>
+                --><div class="row margin-top-1x">
+                    <div class="col-sm-12">
+                            <label for="">数量：</label>
+                            <button id="numDown" class="btn btn-sm btn-secondary" type="button"><label style="font-size: 200%">-</label></button>
+                            <input id="num" type="text" style="width: 10%;display: inline" readonly="readonly" class="num-text form-control" value="1">
+                            &nbsp;&nbsp;&nbsp;<button id="numUp" class="btn btn-sm btn-secondary" type="button"><label style="font-size: 150%">+</label></button>
+                            <!--<select class="form-control" id="num">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>-->
+                    </div>
+                </div>
+                <div class="pt-1 mb-2"><span class="text-medium">编号:</span> #17685932</div>
+                <div class="padding-bottom-1x mb-2">
+                    <span class="text-medium">种类:&nbsp;</span>
+                    <a class="navi-link" href="#">Apple,</a>
+                    <a class="navi-link" href="#"> Smartphone,</a>
+                    <a class="navi-link" href="#"> Mobile</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <hr class="mt-30 mb-30">
+                <div class="d-flex flex-wrap justify-content-between mb-30">
+                    <div class="entry-share">
+                        <span class="text-muted">分享:</span>
+                        <div class="share-links">
+                            <a class="social-button shape-circle sb-wordpress" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="新浪微博">
+                                <i class="socicon-weibo"></i>
+                            </a>
+                            <a class="social-button shape-circle sb-wordpress" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="QQ">
+                                <i class="socicon-qq"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp-buttons mt-2 mb-2">
+                        <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="" data-original-title="喜欢">
+                            <i class="icon-heart"></i>
+                        </button>
+                        <button id="btn-add-to-cart" class="btn btn-primary" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product" data-toast-message="成功添加至购物车!"><i class="icon-bag"></i> 添加至购物车</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Product Info -->
+        </div>
+        <!-- Start Product Tabs -->
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" href="#description" data-toggle="tab" role="tab">介绍</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews" data-toggle="tab" role="tab">评论</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="description" role="tabpanel">
+                    <p>突破性的三摄系统，功能超广却简单易用；电池续航实现了空前的飞跃；极具潜能的芯片，不仅机器学习能力翻倍，更为智能手机开启了新的可能。来，认识一下我们首款足以称之为 Pro 的 iPhone。</p>
+                    <p class="mb-30">全新三摄系统，将尖端科技和 iPhone 简单易用的标志性风格融为一体。最高达四倍的取景范围，更大场面一镜通收。强大的低光拍摄，在昏暗中照样捕捉精彩。你还能拍出 iPhone 迄今画质最高的视频，而且用照片里各种熟悉的修图工具就能编辑。这种拍摄体验，真的与众不同。</p>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                    <!-- Start Review #1 -->
+                    <div class="comment">
+                        <div class="comment-author-ava"><img src="../assets/images/account/user-ava-md.jpg" alt="Review Author"></div>
+                        <div class="comment-body">
+                            <div class="comment-header d-flex flex-wrap justify-content-between">
+                                <h4 class="comment-title">栖木</h4>
+                                <div class="mb-2">
+                                    <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i></div>
+                                </div>
+                            </div>
+                            <p class="comment-text">广阔大视野。 iPhone 11 Pro 可从长焦摄像头一直到全新的超广角摄像头，进行效果出众的 4 倍光学变焦。</p>
+                            <div class="comment-footer"><span class="comment-meta">Naruto</span></div>
+                        </div>
+                    </div>
+                    <!-- End Review #1 -->
+                </div>
+            </div>
+        </div>
+        <!-- End Product Tabs -->
+    </div>
+    <!-- End Product Content -->
+    <!-- Start Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <!-- Start Copyright -->
+            <p class="footer-copyright text-center">© 2020 lihao | All rights <a href="">Reserved</a></p>
+            <!-- End Copyright -->
+        </div>
+    </footer>
+    <!-- End Footer -->
+</div>
+<!-- Start Photoswipe Container -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Photoswipe Container -->
+<!-- Start Back To Top -->
+<a class="scroll-to-top-btn" href="#">
+    <i class="icon-arrow-up"></i>
+</a>
+<!-- End Back To Top -->
+<div class="site-backdrop"></div>
+<!-- Modernizr JS -->
+<script src="../assets/js/modernizr.min.js"></script>
+<!-- JQuery JS -->
+<script src="../assets/js/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="../assets/js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="../assets/js/bootstrap.min.js"></script>
+<!-- CountDown JS -->
+<script src="../assets/js/count.min.js"></script>
+<!-- Gmap JS -->
+<script src="../assets/js/gmap.min.js"></script>
+<!-- ImageLoader JS -->
+<script src="../assets/js/imageloader.min.js"></script>
+<!-- Isotope JS -->
+<script src="../assets/js/isotope.min.js"></script>
+<!-- NouiSlider JS -->
+<script src="../assets/js/nouislider.min.js"></script>
+<!-- OwlCarousel JS -->
+<script src="../assets/js/owl.carousel.min.js"></script>
+<!-- PhotoSwipe UI JS -->
+<script src="../assets/js/photoswipe-ui-default.min.js"></script>
+<!-- PhotoSwipe JS -->
+<script src="../assets/js/photoswipe.min.js"></script>
+<!-- Velocity JS -->
+<script src="../assets/js/velocity.min.js"></script>
+<!-- Main JS -->
+<script src="../assets/js/script.js"></script><script src="../assets/js/custom.js"></script>
+<script src="../assets/myjs/shop-single.js"></script>
+</body>
+</html>
