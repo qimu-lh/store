@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ytu.jierui.store.mapper.AdminMapper">
+
+    <resultMap id="AdminEntityMap" type="com.ytu.jierui.store.entity.Admin">
+        <id column="aid" property="aid"/>
+        <result column="adminname" property="adminname"/>
+        <result column="password" property="password"/>
+        <result column="salt" property="salt"/>
+        <result column="belonger" property="belonger"/>
+        <result column="status" property="status"/>
+        <result column="created_user" property="createdUser"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="modified_user" property="modifiedUser"/>
+        <result column="modified_time" property="modifiedTime"/>
+    </resultMap>
+
+    <!-- 插入用户数据 -->
+    <!-- Integer createAdmin(Admin admin); -->
+    <insert id="createAdmin" useGeneratedKeys="true" keyProperty="aid">
+			INSERT INTO admin (
+				adminname, password,salt,belonger,status,
+				created_user,created_time,modified_user, modified_time
+			) VALUES (
+				#{adminname}, #{password},#{salt},#{belonger},#{status},
+				#{createdUser},#{createdTime},#{modifiedUser}, #{modifiedTime}
+			)
+	</insert>
+
+    <!-- 根据用户名查询用户数据 -->
+    <!-- Admin findByAdminname(String adminname); -->
+    <select id="findByAdminname" resultMap="AdminEntityMap">
+			SELECT
+				*
+			FROM
+				admin
+			WHERE
+				adminname=#{adminname}
+	</select>
+
+	<!--Admin findByAid(Integer aid);-->
+	<select id="findByAid" resultMap="AdminEntityMap">
+			SELECT
+				*
+			FROM
+				admin
+			WHERE
+				aid=#{aid}
+	</select>
+
+	<!-- Admin findByConditions(Integer aid,String adminname,Integer status);-->
+	<select id="findByConditions" resultMap="AdminEntityMap">
+			SELECT
+				*
+			FROM
+				admin
+			WHERE
+				aid=#{aid}
+			AND
+				adminname=#{adminname}
+			AND
+				status=#{status}
+	</select>
+
+	<!--List<Admin> findAllAdmin();-->
+	<select id="findAllAdmin" resultMap="AdminEntityMap">
+			SELECT
+				*
+			FROM
+				admin
+	</select>
+
+	<!--Integer updateStatus(Integer aid,Integer status);-->
+	<update id="updateStatus">
+		UPDATE
+			admin
+		SET
+			status=#{status}
+		WHERE
+			aid=#{aid}
+	</update>
+
+	<!--Integer deleteByAid(Integer aid);-->
+	<delete id="deleteByAid">
+		DELETE FROM
+		admin
+		WHERE
+		aid=#{aid}
+	</delete>
+
+	<!--Integer updateBelongerByAid(Integer aid,String belonger);-->
+	<update id="updateBelongerByAid">
+		UPDATE
+			admin
+		SET
+			belonger=#{belonger}
+		WHERE
+			aid=#{aid}
+	</update>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+

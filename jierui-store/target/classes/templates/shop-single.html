@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>商品详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" th:href="@{../static/assets/images/favicon.ico}">
+    <link rel="stylesheet" media="screen" href="assets/css/bootstrap.min.css" th:href="@{../static/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/font-awesome.min.css" th:href="@{../static/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/feather-icons.css" th:href="@{../static/assets/css/feather-icons.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/pixeden.css" th:href="@{../static/assets/css/pixeden.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/socicon.css" th:href="@{../static/assets/css/socicon.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/photoswipe.css" th:href="@{../static/assets/css/photoswipe.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/izitoast.css" th:href="@{../static/assets/css/izitoast.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/style.css" th:href="@{../static/assets/css/style.css}">
+</head>
+<body>
+<!--侧边数据部分-->
+<div class="offcanvas-container active" id="mobile-menu">
+    <a class="account-link" href="#">
+        <div class="user-info">
+            <h6 class="user-name">Welcome~</h6>
+            <span class="text-sm text-white opacity-60">hope you have good days~</span>
+        </div>
+    </a>
+    <nav class="offcanvas-menu">
+        <ul class="menu">
+            <li class="has-children">
+                <span>
+                    <a href="http://localhost:8080/products/hot"><span>首页</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>闪购</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>品类精选直达</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>超市</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>生鲜</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>优惠券</span></a>
+                </span>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--顶部-->
+<div class="topbar">
+    <div class="topbar-column">
+        <a class="hidden-md-down" href="#"><i class="fa fa-phone">CHINA</i></a>
+    </div>
+    <div class="topbar-column">
+        <div class="lang-currency-switcher-wrap">
+            <span class="currency">￥ RMB</span>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<header class="navbar navbar-sticky">
+    <!--搜索入口-->
+    <form class="site-search" id="search-str" onsubmit="return false">
+        <input id="inp-search" type="text" name="str" placeholder="输入商品名称进行搜索...">
+        <div class="search-tools">
+            <span class="clear-search" id="search">键入回车进行搜索</span>
+            <span class="close-search"><i class="icon-cross"></i></span>
+        </div>
+    </form>
+    <!--Logo -->
+    <div class="site-branding">
+        <div class="inner">
+            <a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
+            <a class="site-logo" href="http://localhost:8080/products/hot"><img th:src="@{../static/assets/images/logo/logo.png}" alt="Inspina"></a>
+        </div>
+    </div>
+    <!--Menu -->
+    <nav class="site-menu">
+        <ul>
+            <li>
+                <a href="http://localhost:8080/products/hot"><span>首页</span></a>
+            </li>
+            <li>
+                <a href="#"><span>闪购</span></a>
+            </li>
+            <li>
+                <a href="#"><span>品类精选直达</span></a>
+            </li>
+            <li>
+                <a href="#"><span>超市</span></a>
+            </li>
+            <li>
+                <a href="#"><span>生鲜</span></a>
+            </li>
+            <li>
+                <a href="#"><span>优惠券</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!--下拉选-->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <div class="search"><i class="icon-search"></i></div>
+            </div>
+        </div>
+    </div>
+</header>
+<header class="navbar navbar-sticky" style="background-color:#f5f5f5;">
+    <!--Menu -->
+    <nav class="site-menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 margin-top-1x"><h3>店铺信息</h3></div>
+            </div>
+        </div>
+    </nav>
+    <!--下拉选-->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <!-- Start Cart -->
+                <div class="cart">
+                    <a href="#"></a>
+                    <i class="icon-bag"></i>
+                    <ul class="toolbar-dropdown">
+                            <li><a href="">手 机</a></li>
+                            <li><a href="">台 式 电 脑</a></li>
+                            <li><a href="">笔 记 本 电 脑</a></li>
+                            <li><a href="">配 件</a></li>
+                            <li class="sub-menu-separator"></li>
+                            <li><a href="">乐 享 无 忧</a></li>
+                    </ul>
+                </div>
+                <!-- End Cart -->
+            </div>
+        </div>
+    </div>
+</header>
+<div class="offcanvas-wrapper">
+    <!--商品内容-->
+    <div class="container padding-top-1x padding-bottom-3x">
+        <div class="row">
+            <!--商品轮播展览-->
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="product-gallery">
+                    <div class="gallery-wrapper">
+                        <div class="gallery-item active"><a id="products-image-1-big" th:href="@{'../static'+${product.getImage()}}" data-hash="one" data-size="1000x667"></a></div>
+                        <div class="gallery-item"><a id="products-image-2-big"  th:href="@{'../static'+${product.getImage()}}" data-hash="two" data-size="1000x667"></a></div>
+                        <div class="gallery-item"><a id="products-image-3-big"  th:href="@{'../static'+${product.getImage()}}" data-hash="three" data-size="1000x667"></a></div>
+                        <div class="gallery-item"><a id="products-image-4-big"  th:href="@{'../static'+${product.getImage()}}" data-hash="four" data-size="1000x667"></a></div>
+                        <div class="gallery-item"><a id="products-image-5-big"  th:href="@{'../static'+${product.getImage()}}" data-hash="five" data-size="1000x667"></a></div>
+                    </div>
+                    <div class="product-carousel owl-carousel">
+                        <div data-hash="one"><img class="products-images" id="products-image-1-md"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></div>
+                        <div data-hash="two"><img class="products-images" id="products-image-2-md"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></div>
+                        <div data-hash="three"><img class="products-images" id="products-image-3-md"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></div>
+                        <div data-hash="four"><img class="products-images" id="products-image-4-md"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></div>
+                        <div data-hash="five"><img class="products-images" id="products-image-5-md"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></div>
+                    </div>
+                    <ul class="product-thumbnails">
+                        <li class="active"><a href="#one"><img class="products-images" id="products-image-1-sm"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></a></li>
+                        <li><a href="#two"><img class="products-images" id="products-image-2-sm"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></a></li>
+                        <li><a href="#three"><img class="products-images" id="products-image-3-sm"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></a></li>
+                        <li><a href="#four"><img class="products-images" id="products-image-4-sm"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></a></li>
+                        <li><a href="#five"><img class="products-images" id="products-image-5-sm"  th:src="@{'../static'+${product.getImage()}}" alt="Product"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!--商品详细信息-->
+            <div class="col-md-6 col-sm-12 col-xs-12 single-shop">
+                <div class="hidden-md-up"></div>
+                <div class="rating-stars">
+                    <i class="icon-star filled"></i>
+                    <i class="icon-star filled"></i>
+                    <i class="icon-star filled"></i>
+                    <i class="icon-star filled"></i>
+                    <i class="icon-star filled"></i>
+                </div>
+                <span class="text-muted align-middle">&nbsp;&nbsp;5 | 13w 浏览量</span>
+                <h2 th:text="${product.getName()}" id="products-name" class="padding-top-1x text-normal with-side">iPhone 11 Pro Max 128GB</h2>
+                <span th:text="'￥'+${product.getPrice()}" id="products-price" class="h2 d-block with-side"><del class="text-muted text-normal">￥8899.00</del>&nbsp; ￥7749.60</span>
+                <p id="products-information">商品描述：</p>
+                <h5 th:text="${product.getInformation()}">可横可竖，可近可远，可裁可剪，可明可暗，很可以。</h5>
+                <div class="row margin-top-1x">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="size">规格大小</label>
+                            <select class="form-control" id="size">
+                                <option>选择规格</option>
+                                <option>16GB</option>
+                                <option>32GB</option>
+                                <option>64GB</option>
+                                <option>128GB</option>
+                                <option>256GB</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="color">选择颜色</label>
+                            <select class="form-control" id="color">
+                                <option>银白</option>
+                                <option>纯黑</option>
+                                <option>浅紫</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row margin-top-1x">
+                    <div class="col-sm-12">
+                            <label>数量：</label>
+                            <button id="numDown" class="btn btn-sm btn-secondary" type="button"><label style="font-size: 200%">-</label></button>
+                            <input id="num" class="form-control shopNum" type="number" style="width: 19%;display: inline;text-align: center" value="1">
+                            &nbsp;&nbsp;&nbsp;<button id="numUp" class="btn btn-sm btn-secondary" type="button"><label style="font-size: 150%">+</label></button>
+                    </div>
+                </div>
+            </div>
+            <!--商品信息下边栏-->
+            <div class="col-md-12">
+                <hr class="mt-30 mb-30">
+                <div class="d-flex flex-wrap justify-content-between mb-30">
+                    <div class="entry-share">
+                        <span class="text-muted">分享:</span>
+                        <div class="share-links">
+                            <a class="social-button shape-circle sb-wordpress" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="新浪微博">
+                                <i class="socicon-weibo"></i>
+                            </a>
+                            <a class="social-button shape-circle sb-wordpress" href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="QQ">
+                                <i class="socicon-qq"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sp-buttons mt-2 mb-2">
+                        <button class="btn btn-success" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Product"><i class="icon-anchor"></i> 立即购买</button>
+                        <input id="productId" th:value="${product.getPid()}" style="display: none">
+                        <button id="btn-add-to-cart" class="btn btn-primary"><i class="icon-bag"></i> 添加至购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品 Tabs -->
+        <div class="col-md-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a class="nav-link active" href="#description" data-toggle="tab" role="tab">商品介绍</a></li>
+                <li class="nav-item"><a class="nav-link" href="#after-sales" data-toggle="tab" role="tab">售后保障</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews" data-toggle="tab" role="tab">评论</a></li>
+            </ul>
+            <div class="tab-content">
+                <!--商品详细信息-->
+                <div class="tab-pane fade show active" id="description" role="tabpanel">
+                    <p>突破性的三摄系统，功能超广却简单易用；电池续航实现了空前的飞跃；极具潜能的芯片，不仅机器学习能力翻倍，更为智能手机开启了新的可能。来，认识一下我们首款足以称之为 Pro 的 iPhone。</p>
+                    <p class="mb-30">全新三摄系统，将尖端科技和 iPhone 简单易用的标志性风格融为一体。最高达四倍的取景范围，更大场面一镜通收。强大的低光拍摄，在昏暗中照样捕捉精彩。你还能拍出 iPhone 迄今画质最高的视频，而且用照片里各种熟悉的修图工具就能编辑。这种拍摄体验，真的与众不同。</p>
+                </div>
+                <!--售后保障-->
+                <div class="tab-pane fade" id="after-sales" role="tabpanel">
+                    <div class="m m-content guarantee" id="guarantee">
+                        <div class="mt">
+                            <h3>售后保障</h3>
+                        </div>
+                        <div class="mc">
+                            <div class="item-detail item-detail-copyright">
+                                <div class="serve-agree-bd">
+                                    <dl>
+                                        <dt>
+                                            <strong>厂家服务</strong>
+                                        </dt>
+                                        <dd>
+                                            本产品全国联保，享受三包服务，质保期为：一年质保<br>
+                                            如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！<br>(注:如厂家在商品介绍中有售后保障的说明,则此商品按照厂家说明执行售后保障服务。)
+                                        </dd>
+                                        <dt>
+                                            <strong>YTUStore承诺</strong>
+                                        </dt>
+                                        <dd>
+                                            YTUStore平台卖家销售并发货的商品，由平台卖家提供发票和相应的售后服务。请您放心购买！<br>
+                                            注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+                                        </dd>
+                                        <dt>
+                                            <i class="goods"></i><strong>
+                                            正品行货             </strong>
+                                        </dt>
+                                        <dd>YTUStore商城向您保证所售商品均为正品行货，YTUStore自营商品开具机打发票或电子发票。</dd>
+                                        <dt><i class="unprofor"></i><strong>全国联保</strong></dt>
+                                        <dd>
+                                            凭质保证书及YTUStore商城发票，可享受全国联保服务（奢侈品、钟表除外；奢侈品、钟表由YTUStore联系保修，享受法定三包售后服务），与您亲临商场选购的商品享受相同的质量保证。YTUStore商城还为您提供具有竞争力的商品价格和<a href="" target="_blank">运费政策</a>，请您放心购买！
+                                            <br><br>注：因厂家会在没有任何提前通知的情况下更改产品包装、产地或者一些附件，本司不能确保客户收到的货物与商城图片、产地、附件说明完全一致。只能确保为原厂正货！并且保证与当时市场上同样主流新品一致。若本商城没有及时更新，请大家谅解！
+                                        </dd>
+                                        <dt><i class="no-worries"></i><strong>无忧退货</strong></dt>
+                                        <dd class="no-worries-text">
+                                            客户购买YTUStore自营商品7日内（含7日，自客户收到商品之日起计算），在保证商品完好的前提下，可无理由退货。（部分商品除外，详情请见各商品细则）
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--评论-->
+                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                    <!-- Start 评论 #1 -->
+                    <div class="comment">
+                        <div class="comment-author-ava"><img src="../static/assets/images/account/user-ava-md.jpg" alt="Review Author"></div>
+                        <div class="comment-body">
+                            <div class="comment-header d-flex flex-wrap justify-content-between">
+                                <h4 class="comment-title">栖木</h4>
+                                <div class="mb-2">
+                                    <div class="rating-stars"><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i><i class="icon-star filled"></i></div>
+                                </div>
+                            </div>
+                            <p class="comment-text">广阔大视野。 iPhone 11 Pro 可从长焦摄像头一直到全新的超广角摄像头，进行效果出众的 4 倍光学变焦。</p>
+                            <div class="comment-footer"><span class="comment-meta">Naruto</span></div>
+                        </div>
+                    </div>
+                    <!-- End 评论 #1 -->
+                </div>
+            </div>
+        </div>
+        <!-- End 商品 Tabs -->
+    </div>
+    <!-- End 商品内容 -->
+    <!-- Footer -->
+    <footer class="site-footer hidden-md-down">
+        <div class="container">
+            <p class="footer-copyright text-center">© 2020 lihao | All rights <a href="">Reserved</a></p>
+        </div>
+    </footer>
+</div>
+<!--返回箭头-->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="scroll-to-top-btn" href="#">
+    <i class="icon-arrow-up"></i>
+</a>
+<div class="site-backdrop"></div>
+<script th:src="@{../static/assets/js/modernizr.min.js}"></script>
+<script th:src="@{../static/assets/js/jquery.min.js}"></script>
+<script th:src="@{../static/assets/js/popper.min.js}"></script>
+<script th:src="@{../static/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{../static/assets/js/count.min.js}"></script>
+<script th:src="@{../static/assets/js/gmap.min.js}"></script>
+<script th:src="@{../static/assets/js/imageloader.min.js}"></script>
+<script th:src="@{../static/assets/js/isotope.min.js}"></script>
+<script th:src="@{../static/assets/js/nouislider.min.js}"></script>
+<script th:src="@{../static/assets/js/owl.carousel.min.js}"></script>
+<script th:src="@{../static/assets/js/photoswipe-ui-default.min.js}"></script>
+<script th:src="@{../static/assets/js/photoswipe.min.js}"></script>
+<script th:src="@{../static/assets/js/velocity.min.js}"></script>
+<script th:src="@{../static/assets/js/script.js}"></script>
+<script th:src="@{../static/assets/js/custom.js}"></script>
+<script>
+    $(function () {
+        //购物数量加1
+        $("#numUp").click(function () {
+            var n = parseInt($("#num").val());
+            if (n>10){
+                return;
+            }
+            $("#num").val(n + 1);
+        })
+        //购物数量-1
+        $("#numDown").click(function () {
+            var n = parseInt($("#num").val());
+            if (n <= 1) {
+                return;
+            }
+            $("#num").val(n - 1);
+        })
+
+        $("#btn-add-to-cart").click(function () {
+            addToCart();
+        });
+    })
+    function addToCart() {
+        var pid=$("#productId").val();
+        $.ajax({
+            "url": "/carts/add_to_cart",
+            "data": "pid=" + pid + "&num=" + $("#num").val(),
+            "type": "POST",
+            "dataType": "json",
+            "success": function (json) {
+                if (json.state === 2000) {
+                    alert("添加购物车成功！")
+                    location.href="http://localhost:8080/carts/";
+                } else {
+                    alert(json.message);
+                }
+            },
+            "error": function () {
+                alert("您尚未登录，或登录已过期！请重新登录！");
+            }
+        });
+    }
+</script>
+</body>
+</html>

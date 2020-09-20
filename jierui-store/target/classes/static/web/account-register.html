@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" media="screen" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="../assets/css/feather-icons.css">
+    <link rel="stylesheet" media="screen" href="../assets/css/pixeden.css">
+    <link rel="stylesheet" media="screen" href="../assets/css/socicon.css">
+    <link rel="stylesheet" media="screen" href="../assets/css/photoswipe.css">
+    <link rel="stylesheet" media="screen" href="../assets/css/izitoast.css">
+    <link rel="stylesheet" media="screen" href="../assets/css/style.css">
+    <link rel="stylesheet" media="screen" href="../assets/css/webcss.css">
+</head>
+<body>
+<!--侧边数据部分-->
+<div class="offcanvas-container active" id="mobile-menu">
+    <a class="account-link" href="#">
+        <div class="user-info">
+            <h6 class="user-name">Welcome~</h6>
+            <span class="text-sm text-white opacity-60">hope you have good days~</span>
+        </div>
+    </a>
+    <nav class="offcanvas-menu">
+        <ul class="menu">
+            <li class="has-children active">
+                <span>
+                    <a href="http://localhost:8080/products/hot"><span>首页</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>闪购</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>品类精选直达</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>超市</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>生鲜</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>优惠券</span></a>
+                </span>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--顶部-->
+<div class="topbar">
+    <div class="topbar-column">
+        <a class="hidden-md-down" href="#"><i class="fa fa-phone">CHINA</i></a>
+    </div>
+    <div class="topbar-column">
+        <div class="lang-currency-switcher-wrap">
+            <span class="currency">￥ RMB</span>
+        </div>
+    </div>
+</div>
+<header class="navbar navbar-sticky">
+    <!--搜索入口-->
+    <form class="site-search" id="search-str" onsubmit="return false">
+        <input id="inp-search" type="text" name="str" placeholder="输入商品名称进行搜索...">
+        <div class="search-tools">
+            <span class="clear-search" id="search">键入回车进行搜索</span>
+            <span class="close-search"><i class="icon-cross"></i></span>
+        </div>
+    </form>
+    <!--Logo -->
+    <div class="site-branding">
+        <div class="inner">
+            <a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
+            <a class="site-logo" href="http://localhost:8080/products/hot"><img src="../assets/images/logo/logo.png" alt="Inspina"></a>
+        </div>
+    </div>
+    <!--Menu -->
+    <nav class="site-menu">
+        <ul>
+            <li class="active">
+                <a href="http://localhost:8080/products/hot"><span>首页</span></a>
+            </li>
+            <li>
+                <a href="#"><span>闪购</span></a>
+            </li>
+            <li>
+                <a href="#"><span>品类精选直达</span></a>
+            </li>
+            <li>
+                <a href="#"><span>超市</span></a>
+            </li>
+            <li>
+                <a href="#"><span>生鲜</span></a>
+            </li>
+            <li>
+                <a href="#"><span>优惠券</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!--下拉选-->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <div class="search"><i class="icon-search"></i></div>
+                <!-- Start Account -->
+                <div class="account">
+                    <a href="#"></a><i class="icon-head"></i>
+                    <ul class="toolbar-dropdown">
+                        <li class="sub-menu-user">
+                            <div class="user-info">
+                                <h6 class="user-name">Welcome~</h6>
+                            </div>
+                        </li>
+                        <li><a href="http://localhost:8080/static/web/account-login.html">登 录</a></li>
+                        <li><a href="http://localhost:8080/static/web/account-register.html">注 册</a></li>
+                    </ul>
+                </div>
+                <!-- End Account -->
+                <!-- Start Cart -->
+                <div class="cart">
+                    <a href="#"></a>
+                    <i class="icon-bag"></i>
+                    <div class="toolbar-dropdown">
+                        <div class="toolbar-dropdown-group">
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-success" href="http://localhost:8080/carts/">查看购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Cart -->
+            </div>
+        </div>
+    </div>
+</header>
+<div class="offcanvas-wrapper" style="background-image: url(../assets/images/banners/background02.jpg);">
+    <!-- 页头 -->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>注册</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li>注册</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Start Account Access -->
+    <div class="container padding-top-1x padding-bottom-3x">
+        <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6 login-box" style="background-color: rgba(255,255,255,0.85);border-radius: 10px;">
+                <div class="padding-top-3x hidden-md-up"></div>
+                <h3 class="margin-bottom-1x padding-top-1x">没有帐户?在这里注册</h3>
+                <p>请填写以下表格 ...</p>
+                <form class="row" id="form-reg" onsubmit="return false">
+                    <div class="col-sm-6">
+                        <div class="form-group" id="v1">
+                            <label>用户昵称</label>
+                            <input id="reg-username" name="username" class="form-control" type="text" placeholder="请输入用户昵称" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group" id="v2">
+                            <label>手机号码</label>
+                            <input id="phone" class="form-control" type="text" name="phone" placeholder="请输入手机号码" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group" id="v5">
+                            <label>密码</label>
+                            <input id="reg-newPassword" class="form-control" type="password" name="password" placeholder="请输入密码" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group" id="v6">
+                            <label>确认密码</label>
+                            <input id="reg-confirmPassword" class="form-control" type="password" placeholder="请输入确认密码" required>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center text-sm-left">
+                        <div class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" id="agreement">
+                            <label class="custom-control-label" for="agreement" id="myBtn">遵守用户协议</label>
+
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal01">
+                                <!-- Modal content -->
+                                <div class="modal01-content">
+                                    <span class="close" id="spanclose">&times;</span>
+                                    <div>
+                                        <h4>一、用户注册</h4>
+                                        <p>&nbsp;&nbsp;&nbsp;您同意本协议并注册成功即成为商标圈的注册用户直至您的账户注销。商标圈可能在必要的时候对本协议条款及商标圈各单项服务协议进行更改，此种更改在商标圈上公布或在具体服务过程中经双方以口头、书面等形式协商一致生效。您可以选择停止使用商标圈相关的服务或者注销您在商标圈的账户，否则商标圈将认为您同意更改后的服务条款。未在商标圈发布或在具体服务过程中未经商标圈告知的服务条款将不具有法律效力，除非签有书面协议，并且仅对签署协议的当事人有效。</p>
+                                    </div>
+                                    <div>
+                                        <h4>二、用户账户</h4>
+                                        <p>&nbsp;&nbsp;&nbsp;您应当拥有中华人民共和国法律认可的完全民事权利能力和完全民事行为能力，否则您和能够代表您行使权利或承担责任的其他主体将承担一切后果。为此，您应当提供相应的证明。如果您是自然人，此类证明可以是您的居民身份证件、个人户营业执照。如果您是法人，此类证明可以是您的营业执照。如果您是其他组织类型，您应当提供相应的合法证明。</p>
+                                        <p>&nbsp;&nbsp;&nbsp;如果使用商标圈提供的各单项服务，您可能还需要提交其他相关的资料和信息。为了提供更好的服务，您也可以向我们提供其他资料和信息，我们将按照商标圈的隐私政策保护您的资料和信息。</p>
+                                        <p>&nbsp;&nbsp;&nbsp;您应当保护好您的账户，除非已经得到您的提前通知，商标圈将认为您的账户处于您的控制之下。如果您的账户在不受您控制的情况下处于风险状态或者已经发生损失，请您及时以有效方式通知商标圈，您可以要求商标圈暂停服务或者冻结账户。</p>
+                                        <p>&nbsp;&nbsp;&nbsp;如果您使用商标圈账户直接访问其他网站，您应当遵守该网站的服务条款。</p>
+                                    </div>
+                                    <div>
+                                        <h4>三、账户管理</h4>
+                                        <p>&nbsp;&nbsp;&nbsp;1、商标圈帐号的所有权归商标圈所有，用户完成申请注册手续后，获得商标圈帐号的使用权，该使用权仅属于初始申请注册人，禁止赠与、借用、租用、转让或售卖。商标圈因经营需要，有权回收用户的商标圈帐号。</p>
+                                        <p>&nbsp;&nbsp;&nbsp;2、用户可以更改、删除商标圈帐户上的个人资料、注册信息及传送内容等，但需注意，删除有关信息的同时也会删除用户储存在系统中的文字和图片。用户需承担该风险。</p>
+                                        <p>&nbsp;&nbsp;&nbsp;3、用户有责任妥善保管注册帐号信息及帐号密码的安全，因用户保管不善可能导致遭受盗号或密码失窃，责任由用户自行承担。用户需要对注册帐号以及密码下的行为承担法律责任。用户同意在任何情况下不使用其他用户的帐号或密码。在用户怀疑他人使用其帐号或密码时，用户同意立即通知商标圈。</p>
+                                        <p>&nbsp;&nbsp;&nbsp;4、用户应遵守本协议的各项条款，正确、适当地使用本服务，如因用户违反本协议中的任何条款，商标圈在通知用户后有权依据协议中断或终止对违约用户商标圈帐号提供服务。同时，商标圈保留在任何时候收回商标圈帐号、用户名的权利。</p>
+                                        <p>&nbsp;&nbsp;&nbsp;5、如用户注册商标圈帐号后一年不登录，通知用户后，商标圈可以收回该帐号，以免造成资源浪费，由此造成的不利后果由用户自行承担。</p>
+                                    </div>
+                                    <hr>
+                                    <div class="col-12 text-center text-xl-right">
+                                        <button class="btn btn-danger right">不同意<span class="close"></span></button>
+                                        <a href="#" id="agree" class="btn btn-success right" disabled>默认即同意</a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-8 text-center text-sm-right">
+                        <button id="btn-reg" class="btn btn-primary margin-bottom-none">注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Account Access -->
+    <footer class="site-footer hidden-md-down">
+        <div class="container">
+            <!-- Start Copyright -->
+            <p class="footer-copyright text-center">© 2020 lihao | All rights <a href="">Reserved</a></p>
+            <!-- End Copyright -->
+        </div>
+    </footer>
+</div>
+<!-- Start Back To Top -->
+<a class="scroll-to-top-btn" href="#">
+    <i class="icon-arrow-up"></i>
+</a>
+<div class="site-backdrop"></div>
+<script src="../assets/js/modernizr.min.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/popper.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/count.min.js"></script>
+<script src="../assets/js/gmap.min.js"></script>
+<script src="../assets/js/imageloader.min.js"></script>
+<script src="../assets/js/isotope.min.js"></script>
+<script src="../assets/js/nouislider.min.js"></script>
+<script src="../assets/js/owl.carousel.min.js"></script>
+<script src="../assets/js/photoswipe-ui-default.min.js"></script>
+<script src="../assets/js/photoswipe.min.js"></script>
+<script src="../assets/js/velocity.min.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script src="../assets/webjs/register.js"></script>
+</body>
+</html>

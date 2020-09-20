@@ -1,0 +1,110 @@
+/*导航栏图标格式*/
+.i-user{
+    font-size: 25px;
+    margin-top: 3px;
+    margin-right: 15px;
+}
+.i-star{
+    font-size: 25px;
+    margin-top: 3px;
+    margin-right: 15px;
+}
+.i-V{
+    font-size: 25px;
+    margin-top: 3px;
+    margin-right: 15px;
+}
+.i-shezhi{
+    font-size: 25px;
+    margin-top: 3px;
+    margin-right: 20px;
+}
+/*logo格式*/
+.img-logo{
+    margin-top: 13px;
+}
+/*导航栏高度*/
+.navbar-top{
+    height: 70px;
+    margin-bottom: 0px;
+    background-color: #FFA21C;
+}
+/*导航栏图标顶部距离*/
+.iconfonts{
+    margin-top: 13px;
+}
+/*首页 格式*/
+.d-index{
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border:1px solid #2C343F;
+    border-radius: 8px;
+    background-color: #2C343F;
+    color: white;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.leftUl{
+    background-color: #2C343F;
+    margin-left: -15px;
+    color: #627385;
+    padding: 0;
+}
+.leftUl>li{
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    line-height: 22px;
+    margin-top: 2px;
+}
+.rightUl{
+    margin-left: -15px;
+    margin-top: 2px;
+}
+.rightUl>li{
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    background-color: #313944;
+    color: white;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+span{
+    display: block;
+}
+.leftDiv{
+    background-color: #36424E;
+    height: 507px;
+}
+.rightBigArea{
+    padding: 0;
+}
+/*iframe设置*/
+#if01{
+    width: 100%;
+    height: 85vh;
+    frameborder：0(no);
+}
+.d1{
+    background-color: #313944;
+    width: 200px;
+    height: 445px;
+    margin-left: 10px;
+    margin-top: 0;
+}
+.rightArea{
+    padding: 0;
+    margin: 0;
+}
