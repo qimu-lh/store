@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../static/assets/images/favicon.ico" th:href="@{../static/assets/images/favicon.ico}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/bootstrap.min.css" th:href="@{../static/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/font-awesome.min.css" th:href="@{../static/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/feather-icons.css" th:href="@{../static/assets/css/feather-icons.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/pixeden.css" th:href="@{../static/assets/css/pixeden.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/socicon.css" th:href="@{../static/assets/css/socicon.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/photoswipe.css" th:href="@{../static/assets/css/photoswipe.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/izitoast.css" th:href="@{../static/assets/css/izitoast.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/style.css" th:href="@{../static/assets/css/style.css}">
+</head>
+<body>
+<!--侧边数据部分-->
+<div class="offcanvas-container active" id="mobile-menu">
+    <a class="account-link" href="#">
+        <div class="user-info">
+            <h6 class="user-name">Welcome~</h6>
+            <span class="text-sm text-white opacity-60">hope you have good days~</span>
+        </div>
+    </a>
+    <nav class="offcanvas-menu">
+        <ul class="menu">
+            <li class="has-children active">
+                <span>
+                    <a href="http://localhost:8080/products/hot"><span>首页</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>闪购</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>品类精选直达</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>超市</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>生鲜</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>优惠券</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href="account-profile.html"><span>个人信息</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href="account-password-recovery.html"><span>找回密码</span></a>
+                </span>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--顶部-->
+<div class="topbar">
+    <div class="topbar-column">
+        <a class="hidden-md-down" href="#"><i class="fa fa-phone">CHINA</i></a>
+    </div>
+    <div class="topbar-column">
+        <div class="lang-currency-switcher-wrap">
+            <span class="currency">￥ RMB</span>
+        </div>
+    </div>
+</div>
+<header class="navbar navbar-sticky">
+    <!--搜索入口-->
+    <form class="site-search" id="search-str" onsubmit="return false">
+        <input id="inp-search" type="text" name="str" placeholder="输入商品名称进行搜索...">
+        <div class="search-tools">
+            <span class="clear-search" id="search">键入回车进行搜索</span>
+            <span class="close-search"><i class="icon-cross"></i></span>
+        </div>
+    </form>
+    <!--Logo -->
+    <div class="site-branding">
+        <div class="inner">
+            <a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
+            <a class="site-logo" href="http://localhost:8080/products/hot"><img src="../static/assets/images/logo/logo.png" alt="Inspina"></a>
+        </div>
+    </div>
+    <!--Menu -->
+    <nav class="site-menu">
+        <ul>
+            <li class="active">
+                <a href="http://localhost:8080/products/hot"><span>首页</span></a>
+            </li>
+            <li>
+                <a href="#"><span>闪购</span></a>
+            </li>
+            <li>
+                <a href="#"><span>品类精选直达</span></a>
+            </li>
+            <li>
+                <a href="#"><span>超市</span></a>
+            </li>
+            <li>
+                <a href="#"><span>生鲜</span></a>
+            </li>
+            <li>
+                <a href="#"><span>优惠券</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!--下拉选-->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <div class="search"><i class="icon-search"></i></div>
+                <!-- Start Account -->
+                <div class="account">
+                    <a href="#"></a><i class="icon-head"></i>
+                    <ul class="toolbar-dropdown">
+                        <li class="sub-menu-user">
+                            <div class="user-info">
+                                <h6 class="user-name">Welcome~</h6>
+                            </div>
+                        </li>
+                        <li><a href="http://localhost:8080/static/web/account-login.html">登 录</a></li>
+                        <li><a href="http://localhost:8080/static/web/account-register.html">注 册</a></li>
+                    </ul>
+                </div>
+                <!-- End Account -->
+                <!-- Start Cart -->
+                <div class="cart">
+                    <a href="#"></a>
+                    <i class="icon-bag"></i>
+                    <div class="toolbar-dropdown">
+                        <div class="toolbar-dropdown-group">
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-success" href="http://localhost:8080/carts/">查看购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Cart -->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="offcanvas-wrapper">
+    <div class="container padding-top-1x padding-bottom-2x">
+        <div class="row">
+            <!--轮播图-->
+            <div class="col-lg-9 order-lg-2 hero-slider home-1-hero">
+                <div class="owl-carousel large-controls dots-inside" data-owl-carousel='{"nav": true, "dots": true, "loop": true, "autoplay": true, "autoplayTimeou": 7000}'>
+                        <div class="item padding-top-3x">
+                            <img id="test" class="d-block mx-auto" src="../static/assets/images/hero-slider/01.png" alt="Chuck Taylor All Star II">
+                            <h3 class="text-center product-title"><a href="">华为超薄笔记本</a>￥6500</h3>
+                        </div>
+                        <div class="item padding-top-3x">
+                            <img class="d-block mx-auto" src="../static/assets/images/hero-slider/02.png" alt="Puma Backpack">
+                            <h3 class="text-center product-title"><a href="">索尼超未来移动手机</a>￥4999</h3>
+                        </div>
+                        <div class="item padding-top-3x">
+                            <img class="d-block mx-auto" src="../static/assets/images/hero-slider/03.png" alt="Moto 360">
+                            <h3 class="text-center product-title"><a href="">小米液晶电视</a>￥3999</h3>
+                        </div>
+                </div>
+                <div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div>
+            </div>
+            <!--侧边栏-->
+            <div class="col-lg-3 order-lg-1 hidden-md-down">
+                <aside class="sidebar">
+                    <div class="padding-top-1x padding-bottom-2x hidden-md-up"></div>
+                    <section class="widget widget-categories">
+                        <h3 class="widget-title">商品品牌</h3>
+                        <ul>
+                            <li><a href="">Apple</a><span>(254)</span></li>
+                            <li><a href="">Samsung</a><span>(39)</span></li>
+                            <li><a href="">Sony</a><span>(205)</span></li>
+                            <li><a href="">华为</a><span>(128)</span></li>
+                            <li><a href="">联想</a><span>(104)</span></li>
+                            <li><a href="">华硕</a><span>(217)</span></li>
+                            <li><a href="">神州</a><span>(95)</span></li>
+                            <li><a href="">Nokia</a><span>(310)</span></li>
+                            <li><a href="">Microsoft</a><span>(134)</span></li>
+                            <li><a href="">小米</a><span>(73)</span></li>
+                            <li><a href="">Android</a><span>(446)</span></li>
+                            <li><a href="">Google</a><span>(87)</span></li>
+                            <li><a href="">Facebook</a><span>(42)</span></li>
+                            <li><a href="">Yahoo</a><span>(289)</span></li>
+                            <li><a href="">Twitter</a><span>(68)</span></li>
+                            <li><a href="">Youtube</a><span>(205)</span></li>
+                            <li><a href="">Instagram</a><span>(128)</span></li>
+                        </ul>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <!--最新产品-->
+    <section class="container padding-top-1x">
+        <h3 class="text-center mb-30">最 新 产 品</h3>
+        <div class="row" id="hot-list">
+            <!--Product #1 -->
+            <div th:each="p : ${data}" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 margin-bottom-1x">
+                <div class="product-card" >
+                    <a class="product-thumb" th:href="@{'http://localhost:8080/products/'+${p.getPid()}}">
+                        <img  class="margin-bottom-1x" th:src="@{'../static'+${p.getImage()}}" src="../static/assets/images/shop/products/01.jpg" alt="iPhone X">
+                    </a>
+                    <h3 class="product-title"><a th:text="${p.getName()}" href="">iPhone X</a></h3>
+                    <h4 th:text="'￥'+${p.getPrice()}" class="product-price">6500</h4>
+                    <div class="product-buttons">
+                        <div class="product-buttons">
+                            <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="喜欢">
+                                <i class="icon-heart"></i>
+                            </button>
+                            <a th:href="@{'http://localhost:8080/products/'+${p.getPid()}}" class="btn btn-outline-primary btn-sm">查看详情</a>
+                        </div>
+                    </div>
+                    <h5 th:text="${p.getShop()}" style="font-size: 2px;text-align: center;color: lightslategray">苹果官方旗舰店</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Footer -->
+    <footer class="site-footer hidden-md-down">
+        <div class="container">
+            <p class="footer-copyright text-center">© 2020 lihao | All rights <a href="">Reserved</a></p>
+        </div>
+    </footer>
+</div>
+<a class="scroll-to-top-btn" href="#">
+    <i class="icon-arrow-up"></i>
+</a>
+<div class="site-backdrop"></div>
+<script src="../static/assets/js/modernizr.min.js" th:src="@{../static/assets/js/modernizr.min.js}"></script>
+<script src="../static/assets/js/jquery.min.js" th:src="@{../static/assets/js/jquery.min.js}"></script>
+<script src="../static/assets/js/popper.min.js" th:src="@{../static/assets/js/popper.min.js}"></script>
+<script src="../static/assets/js/bootstrap.min.js" th:src="@{../static/assets/js/bootstrap.min.js}"></script>
+<script src="../static/assets/js/count.min.js" th:src="@{../static/assets/js/count.min.js}"></script>
+<script src="../static/assets/js/gmap.min.js" th:src="@{../static/assets/js/gmap.min.js}"></script>
+<script src="../static/assets/js/imageloader.min.js" th:src="@{../static/assets/js/imageloader.min.js}"></script>
+<script src="../static/assets/js/isotope.min.js" th:src="@{../static/assets/js/isotope.min.js}"></script>
+<script src="../static/assets/js/nouislider.min.js" th:src="@{../static/assets/js/nouislider.min.js}"></script>
+<script src="../static/assets/js/owl.carousel.min.js" th:src="@{../static/assets/js/owl.carousel.min.js}"></script>
+<script src="../static/assets/js/photoswipe-ui-default.min.js" th:src="@{../static/assets/js/photoswipe-ui-default.min.js}"></script>
+<script src="../static/assets/js/photoswipe.min.js" th:src="@{../static/assets/js/photoswipe.min.js}"></script>
+<script src="../static/assets/js/velocity.min.js" th:src="@{../static/assets/js/velocity.min.js}"></script>
+<script src="../static/assets/js/script.js" th:src="@{../static/assets/js/script.js}"></script>
+<script src="../static/assets/js/custom.js" th:src="@{../static/assets/js/custom.js}"></script>
+<!--<script src="../static/assets/myjs/index.js" th:src="@{../static/assets/myjs/index.js}"></script>-->
+<script src="../static/assets/webjs/index01.js" th:src="@{../static/assets/webjs/index01.js}"></script>
+</body>
+</html>

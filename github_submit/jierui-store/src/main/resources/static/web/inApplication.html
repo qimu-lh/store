@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>入驻申请</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" media="screen" rel="stylesheet">
+    <link href="../assets/css/component.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid container-accountManagement">
+    <div class="row accountManagement-top">
+        <form class="form-inline" onsubmit="return false">
+            <div class="form-group">
+                <label>店铺名称：</label>
+                <input id="shopname" type="text" class="form-control"  placeholder="店铺名称">
+            </div>
+            <div class="form-group accountManagement-form-group2">
+                <label for="storename">商家名称：</label>
+                <input type="text" class="form-control" id="storename" placeholder="商家名称">
+            </div>
+            <div class="form-group inApplication-form-group2">
+                <button id="selectShop" type="submit" class="btn btn-primary">查询</button>
+            </div>
+        </form>
+    </div>
+    <div class="row inApplication-table table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>店铺名称</th>
+                <th>
+                    <div style="margin-left: 100px">
+                    商家名称
+                    </div>
+                </th>
+                <th>
+                    <div style="margin-left: 100px">
+                        申请时间
+                    </div>
+                </th>
+                <th>
+                    <div style="margin-left: 110px">
+                        操作
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="inApplication-pagination row">
+        <div class="col-md-9"></div>
+        <div class="col-md-3" id="page">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="disabled" id="pre"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                    <li class="active aPage" id="li01"><a href="#l1" aria-controls="l1" role="tab" data-toggle="tab">1</a></li>
+                    <li id="next"><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../assets/webjs/application.js"></script>
+<script>
+    //审核店铺AJAX
+    function auditShop(obj) {
+        var sid = $(obj).next().text();
+        var status=($(obj).text()==="审核")?1:0;
+        if (confirm("您确定要审核通过此管理员吗？")){
+            $.ajax({
+                "url": "/shops/" + sid + "/changeStatus/"+status,
+                "type": "POST",
+                "dataType": "json",
+                "success": function (json) {
+                    if (json.state === 2000) {
+                        alert("审核已通过！")
+                        location.href="/static/web/inApplication.html";
+                    } else {
+                        alert(json.message);
+                        location.href="/static/web/inApplication.html";
+                    }
+                },
+                "error": function () {
+                    alert("您的登录信息已过期，请重新登录！");
+                }
+            });
+        }
+    }
+    //店铺搜索
+    $("#selectShop").click(function () {
+        var shopname=$("#shopname").val();
+        var storename=$("#storename").val();
+        $.ajax({
+            "url": "/shops/"+shopname+"/findShopByCondition/"+storename,
+            "type": "get",
+            "dataType": "json",
+            "success": function (json) {
+                if (json.state === 2000) {
+                    var list = json.data;
+                    $("tbody").empty();
+                    $("#page").empty();
+                    var html;
+                    if (list.status===0){
+                        html='<tr>'
+                            +'<th>#{shopname}</th>'
+                            +'<td><div style="margin-left: 100px">#{storename}</div></td>'
+                            +'<td><div style="margin-left: 100px">#{applyTime}</div></td>'
+                            +'<td><div style="margin-left: 100px"><button type="button" class="auditButton btn btn-default" onclick="auditShop(this)">审核</button><lable style="display:none">#{sid}</lable></div></td>'
+                            +'</tr>';
+                        html = html.replace(/#{shopname}/g, list.shopname);
+                        html = html.replace(/#{storename}/g, list.storename);
+                        html = html.replace(/#{applyTime}/g, list.applyTime);
+                        html = html.replace(/#{sid}/g, list.sid);
+                    }else {
+                        html='<tr>'
+                            +'<th>#{shopname}</th>'
+                            +'<td><div style="margin-left: 100px">#{storename}</div></td>'
+                            +'<td><div style="margin-left: 100px">#{applyTime}</div></td>'
+                            +'<td><div style="margin-left: 100px"><button type="button" class="auditButton btn btn-default" onclick="auditShop(this)" disabled="disabled">已审核</button><lable style="display:none">#{sid}</lable></div></td>'
+                            +'</tr>';
+                        html = html.replace(/#{shopname}/g, list.shopname);
+                        html = html.replace(/#{storename}/g, list.storename);
+                        html = html.replace(/#{applyTime}/g, list.applyTime);
+                        html = html.replace(/#{sid}/g, list.sid);
+                    }
+/*                    var html='<tr>'
+                        +'<th>#{shopname}</th>'
+                        +'<td><div style="margin-left: 100px">#{storename}</div></td>'
+                        +'<td><div style="margin-left: 100px">#{applyTime}</div></td>'
+                        +'<td><div style="margin-left: 100px"><button type="button" class="auditButton btn btn-default" onclick="auditShop(this)">#{status}</button><lable style="display:none">#{sid}</lable></div></td>'
+                        +'</tr>';
+                    html = html.replace(/#{shopname}/g, list.shopname);
+                    html = html.replace(/#{storename}/g, list.storename);
+                    html = html.replace(/#{applyTime}/g, list.applyTime);
+                    html = html.replace(/#{status}/g, (list.status===0)?"审核":"已审核");
+                    html = html.replace(/#{sid}/g, list.sid);
+
+                    $("tbody").append(html);*/
+                    $("tbody").append(html);
+                } else {
+                    alert(json.message);
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

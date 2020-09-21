@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ytu.jierui.store.mapper.ProductMapper">
+
+    <resultMap id="ProductEntityMap" type="com.ytu.jierui.store.entity.Product">
+        <id column="pid" property="pid" />
+        <result column="name" property="name" />
+        <result column="num" property="num" />
+        <result column="price" property="price" />
+        <result column="shop" property="shop" />
+        <result column="information" property="information" />
+    </resultMap>
+
+    <!--  List<Product> findHotList(Integer currentPage,Integer pageNum); -->
+    <select id="findHotList" resultMap="ProductEntityMap">
+			SELECT
+				*
+			FROM
+				product
+			ORDER BY
+			    pid DESC
+			LIMIT
+				#{currentPage},#{pageNum}
+	</select>
+
+    <!-- 根据商品id查询商品详情 -->
+    <!-- Product findById(Integer pid) -->
+    <select id="findByPid" resultMap="ProductEntityMap">
+		SELECT
+			*
+		FROM
+			product
+		WHERE
+			pid=#{pid}
+	</select>
+
+</mapper>

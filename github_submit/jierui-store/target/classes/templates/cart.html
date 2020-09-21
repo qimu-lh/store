@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zxx" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>购物车</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../static/assets/images/favicon.ico" th:href="@{../static/assets/images/favicon.ico}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/bootstrap.min.css" th:href="@{../static/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/font-awesome.min.css" th:href="@{../static/assets/css/font-awesome.min.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/feather-icons.css" th:href="@{../static/assets/css/feather-icons.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/pixeden.css" th:href="@{../static/assets/css/pixeden.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/socicon.css" th:href="@{../static/assets/css/socicon.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/photoswipe.css" th:href="@{../static/assets/css/photoswipe.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/izitoast.css" th:href="@{../static/assets/css/izitoast.css}">
+    <link rel="stylesheet" media="screen" href="../static/assets/css/style.css" th:href="@{../static/assets/css/style.css}">
+</head>
+<body>
+<!--侧边数据部分-->
+<div class="offcanvas-container active" id="mobile-menu">
+    <a class="account-link" href="#">
+        <div class="user-info">
+            <h6 class="user-name">Welcome~</h6>
+            <span class="text-sm text-white opacity-60">hope you have good days~</span>
+        </div>
+    </a>
+    <nav class="offcanvas-menu">
+        <ul class="menu">
+            <li class="has-children">
+                <span>
+                    <a href="index.html"><span>首页</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>闪购</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>品类精选直达</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>超市</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>生鲜</span></a>
+                </span>
+            </li>
+            <li class="has-children">
+                <span>
+                    <a href=""><span>优惠券</span></a>
+                </span>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!--顶部-->
+<div class="topbar">
+    <div class="topbar-column">
+        <a class="hidden-md-down" href="#"><i class="fa fa-phone">CHINA</i></a>
+    </div>
+    <div class="topbar-column">
+        <div class="lang-currency-switcher-wrap">
+            <span class="currency">￥ RMB</span>
+        </div>
+    </div>
+</div>
+<!--导航栏-->
+<header class="navbar navbar-sticky">
+    <!--搜索入口-->
+    <form class="site-search" id="search-str" onsubmit="return false">
+        <input id="inp-search" type="text" name="str" placeholder="输入商品名称进行搜索...">
+        <div class="search-tools">
+            <span class="clear-search" id="search">键入回车进行搜索</span>
+            <span class="close-search"><i class="icon-cross"></i></span>
+        </div>
+    </form>
+    <!--Logo -->
+    <div class="site-branding">
+        <div class="inner">
+            <a class="offcanvas-toggle menu-toggle" href="#mobile-menu" data-toggle="offcanvas"></a>
+            <a class="site-logo" href="http://localhost:8080/products/hot"><img th:src="@{../static/assets/images/logo/logo.png}" alt="Inspina"></a>
+        </div>
+    </div>
+    <!--Menu -->
+    <nav class="site-menu">
+        <ul>
+            <li class="active">
+                <a href="index.html"><span>首页</span></a>
+            </li>
+            <li>
+                <a href="#"><span>闪购</span></a>
+            </li>
+            <li>
+                <a href="#"><span>品类精选直达</span></a>
+            </li>
+            <li>
+                <a href="#"><span>超市</span></a>
+            </li>
+            <li>
+                <a href="#"><span>生鲜</span></a>
+            </li>
+            <li>
+                <a href="#"><span>优惠券</span></a>
+            </li>
+            <li>
+                <a href="#"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!--下拉选-->
+    <div class="toolbar">
+        <div class="inner">
+            <div class="tools">
+                <div class="search"><i class="icon-search"></i></div>
+                <!-- Start Account -->
+                <div class="account">
+                    <a href="#"></a><i class="icon-head"></i>
+                    <ul class="toolbar-dropdown">
+                        <li class="sub-menu-user">
+                            <div class="user-info">
+                                <h6 class="user-name">Welcome~</h6>
+                            </div>
+                        </li>
+                        <li><a href="http://localhost:8080/static/web/account-login.html">登 录</a></li>
+                        <li><a href="http://localhost:8080/static/web/account-register.html">注 册</a></li>
+                    </ul>
+                </div>
+                <!-- End Account -->
+                <!-- Start Cart -->
+                <div class="cart">
+                    <a href="#"></a>
+                    <i class="icon-bag"></i>
+                    <div class="toolbar-dropdown">
+                        <div class="toolbar-dropdown-group">
+                            <div class="column">
+                                <a class="btn btn-sm btn-block btn-success" href="http://localhost:8080/carts/">查看购物车</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Cart -->
+            </div>
+        </div>
+    </div>
+</header>
+<div class="offcanvas-wrapper">
+    <!-- Start Page Title -->
+    <div class="page-title">
+        <div class="container">
+            <div class="column">
+                <h1>购物车</h1>
+            </div>
+            <div class="column">
+                <ul class="breadcrumbs">
+                    <li><a href="http://localhost:8080/products/hot">首页</a></li>
+                    <li class="separator">&nbsp;</li>
+                    <li>购物车</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Title -->
+    <!-- Start Cart Content -->
+    <div class="container padding-top-1x padding-bottom-3x">
+        <div class="table-responsive shopping-cart">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" onclick="checkAll(this)">
+                        <label class="custom-control-label" id="selectAll">全选</label>
+                    </th>
+                    <th>商品名称</th>
+                    <th>单价</th>
+                    <th class="text-center">数量</th>
+                    <th class="text-center">总额</th>
+                    <th class="text-center">
+                        <a id="btn-delete-allCarts" class="btn btn-sm btn-outline-danger">删除所有购物车</a>
+                    </th>
+                </tr>
+                </thead>
+                <div th:each="cart : ${carts}">
+                    <tbody class="cart-list" style="background-color:#EEFAFF;">
+                    <div class="col-md-12">
+                        <tr>
+                            <td>
+                                <input class="selectShop" type="checkbox">&nbsp;<label th:text="${cart.getShop()}">iPhone官方旗舰店</label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input class="selectSingle" type="checkbox">
+                            </td>
+                            <td>
+                                <div class="product-item">
+                                    <a class="product-thumb" href="">
+                                        <img th:src="${'../static'+cart.getImage()}" alt="Product">
+                                    </a>
+                                    <div class="product-info">
+                                        <h4 class="product-title"><a href="" th:text="${cart.getName()}">iPhone X Black</a></h4>
+                                        <span><em>Size:</em> 64GB</span><span><em>Color:</em> Gold</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>￥<label class="singleShopPrice" th:id="${'price-'+cart.getCid()}" th:text="${cart.getRealPrice()}">999</label></td>
+                            <td class="text-center" th:id="${cart.getCid()}">
+                                <button class="btn btn-sm btn-secondary reduce" type="button"><label style="font-size: 200%">-</label></button>
+                                <input th:id="${'inp-num-'+cart.getCid()}" class="form-control shopNum" type="number" style="width: 19%;display: inline;text-align: center" th:value="${cart.getNum()}">
+                                <button id="numUp" class="btn btn-sm btn-secondary add" type="button"><label style="font-size: 150%">+</label></button>
+                            </td>
+                            <td class="text-center text-lg text-medium">￥<label th:id="${'total-price-'+cart.getCid()}" class="singleTotalPrice" th:text="${cart.getRealPrice()*cart.getNum()}">999</label></td>
+                            <td class="text-center">
+                                <a onclick="deleteCart(this)" class="remove-from-cart" href="#" data-toggle="tooltip" title="删除此商品"><i class="icon-cross"></i></a>
+                            </td>
+                        </tr>
+                    </div>
+                    </tbody>
+                </div>
+            </table>
+        </div>
+        <div class="shopping-cart-footer">
+            <div class="column">
+                <a class="btn btn-outline-secondary" href="index.html"><i class="icon-arrow-left"></i>&nbsp;继续选购</a>
+            </div>
+            <div class="column">
+                <label style="font-size: 17px">Total: ￥<span class="text-medium" id="totalPrice-cart"></span></label>
+                <a class="btn btn-success" href="checkout-address.html">结算</a>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer hidden-md-down">
+        <div class="container">
+            <p class="footer-copyright text-center">© 2020 lihao | All rights <a href="">Reserved</a></p>
+        </div>
+    </footer>
+</div>
+<a class="scroll-to-top-btn" href="#">
+    <i class="icon-arrow-up"></i>
+</a>
+<div class="site-backdrop"></div>
+<script th:src="@{../static/assets/js/modernizr.min.js}"></script>
+<script th:src="@{../static/assets/js/jquery.min.js}"></script>
+<script th:src="@{../static/assets/js/popper.min.js}"></script>
+<script th:src="@{../static/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{../static/assets/js/count.min.js}"></script>
+<script th:src="@{../static/assets/js/gmap.min.js}"></script>
+<script th:src="@{../static/assets/js/imageloader.min.js}"></script>
+<script th:src="@{../static/assets/js/isotope.min.js}"></script>
+<script th:src="@{../static/assets/js/nouislider.min.js}"></script>
+<script th:src="@{../static/assets/js/owl.carousel.min.js}"></script>
+<script th:src="@{../static/assets/js/photoswipe-ui-default.min.js}"></script>
+<script th:src="@{../static/assets/js/photoswipe.min.js}"></script>
+<script th:src="@{../static/assets/js/velocity.min.js}"></script>
+<script th:src="@{../static/assets/js/script.js}"></script>
+<script th:src="@{../static/assets/js/custom.js}"></script>
+<!--<script src="../assets/myjs/cart.js"></script>-->
+<script th:src="@{../static/assets/webjs/cart01.js}"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员登录</title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" media="screen" rel="stylesheet">
+    <link href="../assets/css/iconfont.css" rel="stylesheet">
+    <link href="../assets/css/component.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid container-changePassword">
+    <div style="margin-bottom: 40px">
+        <h3 style="text-align: center;"><span class="label label-info">管理员登录</span></h3>
+    </div>
+    <form id="form-boss-login" class="form-horizontal" onsubmit="return false">
+        <div class="form-group">
+            <label for="bossname" class="col-sm-3 control-label">账号：</label>
+            <div class="col-sm-9">
+                <input type="email" name="bossname" class="form-control" id="bossname" placeholder="请输入账号">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-3 control-label">密码：</label>
+            <div class="col-sm-9">
+                <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-9 col-sm-9">
+                <button id="boss-login" type="button" class="btn btn-primary">登录</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script>
+    $("#boss-login").click(function () {
+        if ($("#bossname").val()===""){
+            alert("管理员名不能为空！");
+        }else if ($("#password").val()===""){
+            alert("密码不能为空！")
+        }else {
+            $.ajax({
+                "url": "/bosses/login",
+                "data": $("#form-boss-login").serialize(),
+                "type": "post",
+                "dataType": "json",
+                "success": function (json) {
+                    if (json.state === 2000) {
+                        alert("登录成功");
+                        // 跳转到某个页面
+                        location.href="http://localhost:8080/static/web/changePassword.html";
+                        window.event.returnValue=false; //return false是阻止游览器对事件的默认处理
+                    } else {
+                        alert(json.message);
+                    }
+                }
+            });
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ytu.jierui.store.mapper.ShopMapper">
+
+    <resultMap id="ShopEntityMap" type="com.ytu.jierui.store.entity.Shop">
+        <id column="sid" property="sid"/>
+        <result column="shopname" property="shopname"/>
+        <result column="storename" property="storename"/>
+        <result column="apply_time" property="applyTime"/>
+        <result column="status" property="status"/>
+    </resultMap>
+
+	<!--List<Shop> selectAllShop();-->
+	<select id="selectAllShop" resultMap="ShopEntityMap">
+			SELECT
+				*
+			FROM
+				shop
+	</select>
+
+	<!--Shop selectByConditions(String shopname, String storename);-->
+	<select id="selectByConditions" resultMap="ShopEntityMap">
+			SELECT
+				*
+			FROM
+				shop
+			WHERE
+				shopname=#{shopname}
+			AND
+				storename=#{storename}
+	</select>
+
+    <!-- Integer updateStatusBySid(Integer sid,Integer status);-->
+    <update id="updateStatusBySid">
+		UPDATE
+			shop
+		SET
+			status=#{status}
+		WHERE
+			sid=#{sid}
+	</update>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
