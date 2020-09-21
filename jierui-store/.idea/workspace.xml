@@ -700,6 +700,23 @@
       <change beforePath="$PROJECT_DIR$/../homework/out/production/homework/cn/ytu/demo02.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework/src/cn/ytu/demo01.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework/src/cn/ytu/demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/account-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/account-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ytu/jierui/store/service/ProductTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ytu/jierui/store/service/ProductTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/web/account-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/web/account-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/caches/build_file_checksums.ser" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/codeStyles/Project.xml" beforeDir="false" />
@@ -1551,8 +1568,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Interface" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
@@ -1633,6 +1650,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductMapperTests.findPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jierui-store" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ytu.jierui.store.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ytu.jierui.store.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.mapper.ProductMapperTests" />
+      <option name="METHOD_NAME" value="findPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductTests.findByPid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jierui-store" />
       <extension name="coverage">
@@ -1649,23 +1682,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserMapperTests.findByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jierui-store" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ytu.jierui.store.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ytu.jierui.store.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.mapper.UserMapperTests" />
-      <option name="METHOD_NAME" value="findByUsername" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceTests.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProductTests.findPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jierui-store" />
       <extension name="coverage">
         <pattern>
@@ -1674,8 +1691,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.ytu.jierui.store.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.service.UserServiceTests" />
-      <option name="METHOD_NAME" value="login" />
+      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.service.ProductTests" />
+      <option name="METHOD_NAME" value="findPage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1690,11 +1707,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductTests.findPage" />
+        <item itemvalue="JUnit.ProductMapperTests.findPage" />
         <item itemvalue="JUnit.BossServiceTests.login" />
         <item itemvalue="JUnit.BossServiceTests.reg" />
         <item itemvalue="JUnit.ProductTests.findByPid" />
-        <item itemvalue="JUnit.UserServiceTests.login" />
-        <item itemvalue="JUnit.UserMapperTests.findByUsername" />
       </list>
     </recent_temporary>
   </component>
@@ -1721,7 +1738,9 @@
       <workItem from="1600473507789" duration="10671000" />
       <workItem from="1600504330339" duration="8801000" />
       <workItem from="1600515407425" duration="1257000" />
-      <workItem from="1600604756872" duration="3884000" />
+      <workItem from="1600604756872" duration="4259000" />
+      <workItem from="1600646199993" duration="9487000" />
+      <workItem from="1600673157210" duration="1671000" />
     </task>
     <servers />
   </component>
@@ -1741,38 +1760,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600395383882" />
-    <state width="1237" height="384" key="GridCell.Tab.0.bottom" timestamp="1600608124011">
+    <state width="1237" height="384" key="GridCell.Tab.0.bottom" timestamp="1600674793557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600608124011" />
-    <state width="1237" height="384" key="GridCell.Tab.0.center" timestamp="1600608124011">
+    <state width="1237" height="384" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600674793557" />
+    <state width="1237" height="384" key="GridCell.Tab.0.center" timestamp="1600674793557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600608124011" />
-    <state width="1237" height="384" key="GridCell.Tab.0.left" timestamp="1600608124011">
+    <state width="1237" height="384" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600674793557" />
+    <state width="1237" height="384" key="GridCell.Tab.0.left" timestamp="1600674793556">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600608124011" />
-    <state width="1237" height="384" key="GridCell.Tab.0.right" timestamp="1600608124011">
+    <state width="1237" height="384" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600674793556" />
+    <state width="1237" height="384" key="GridCell.Tab.0.right" timestamp="1600674793557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600608124011" />
-    <state width="1237" height="384" key="GridCell.Tab.1.bottom" timestamp="1600608124011">
+    <state width="1237" height="384" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600674793557" />
+    <state width="1237" height="384" key="GridCell.Tab.1.bottom" timestamp="1600674793557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600608124011" />
-    <state width="1237" height="384" key="GridCell.Tab.1.center" timestamp="1600608124011">
+    <state width="1237" height="384" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600674793557" />
+    <state width="1237" height="384" key="GridCell.Tab.1.center" timestamp="1600674793557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600608124011" />
-    <state width="1237" height="384" key="GridCell.Tab.1.left" timestamp="1600608124011">
+    <state width="1237" height="384" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600674793557" />
+    <state width="1237" height="384" key="GridCell.Tab.1.left" timestamp="1600674793557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600608124011" />
-    <state width="1237" height="384" key="GridCell.Tab.1.right" timestamp="1600608124011">
+    <state width="1237" height="384" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600674793557" />
+    <state width="1237" height="384" key="GridCell.Tab.1.right" timestamp="1600674793557">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600608124011" />
+    <state width="1237" height="384" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600674793557" />
     <state width="1237" height="249" key="GridCell.Tab.2.bottom" timestamp="1600484863148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

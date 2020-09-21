@@ -7,7 +7,7 @@ public interface UserMapper {
     //注册
     Integer save(User user);
 
-    //根据用户名查询用户信息
+    //根据用户名 或手机号 查询用户信息
     User selectByUsername(String username);
 
 }

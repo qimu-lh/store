@@ -13,8 +13,7 @@
         <result column="information" property="information" />
     </resultMap>
 
-    <!-- 查询最新商品的前12个商品数据 -->
-    <!-- List<Product> findHotList() -->
+    <!--  List<Product> findHotList(Integer currentPage,Integer pageNum); -->
     <select id="findHotList" resultMap="ProductEntityMap">
 			SELECT
 				*
@@ -23,7 +22,7 @@
 			ORDER BY
 			    pid DESC
 			LIMIT
-				0,12
+				#{currentPage},#{pageNum}
 	</select>
 
     <!-- 根据商品id查询商品详情 -->

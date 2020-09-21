@@ -1,7 +1,6 @@
-package com.ytu.jierui.store.service;
+package com.ytu.jierui.store.mapper;
 
 import com.ytu.jierui.store.entity.Product;
-import com.ytu.jierui.store.mapper.ProductMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,22 +11,15 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ProductTests {
+public class ProductMapperTests {
 
     @Autowired
-    private ProductMapper productMapper;
-
-    @Test
-    public void findByPid(){
-        Product pro = productMapper.findByPid(1);
-        System.out.println(pro);
-    }
+    ProductMapper productMapper;
 
     @Test
     public void findPage(){
         List<Product> hotList = productMapper.findHotList(4, 4);
-        for (Product list:
-             hotList) {
+        for (Product list:hotList) {
             System.out.println(list);
         }
     }

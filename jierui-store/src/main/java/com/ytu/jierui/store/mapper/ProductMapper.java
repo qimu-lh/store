@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ProductMapper {
 
-    List<Product> findHotList();
+    List<Product> findHotList(Integer currentPage,Integer pageNum);
 
     Product findByPid(Integer pid);
 }

@@ -46,6 +46,8 @@
 				user
 			WHERE
 				username=#{username}
+			OR
+				phone=#{username}
 	</select>
 
 </mapper>

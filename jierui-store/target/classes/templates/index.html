@@ -223,7 +223,7 @@
                         <img  class="margin-bottom-1x" th:src="@{'../static'+${p.getImage()}}" src="../static/assets/images/shop/products/01.jpg" alt="iPhone X">
                     </a>
                     <h3 class="product-title"><a th:text="${p.getName()}" href="">iPhone X</a></h3>
-                    <h4 th:text="${p.getPrice()}" class="product-price">￥6500</h4>
+                    <h4 th:text="'￥'+${p.getPrice()}" class="product-price">6500</h4>
                     <div class="product-buttons">
                         <div class="product-buttons">
                             <button class="btn btn-outline-secondary btn-sm btn-wishlist" data-toggle="tooltip" title="喜欢">
@@ -248,21 +248,22 @@
     <i class="icon-arrow-up"></i>
 </a>
 <div class="site-backdrop"></div>
-<script th:src="@{../static/assets/js/modernizr.min.js}"></script>
-<script th:src="@{../static/assets/js/jquery.min.js}"></script>
-<script th:src="@{../static/assets/js/popper.min.js}"></script>
-<script th:src="@{../static/assets/js/bootstrap.min.js}"></script>
-<script th:src="@{../static/assets/js/count.min.js}"></script>
-<script th:src="@{../static/assets/js/gmap.min.js}"></script>
-<script th:src="@{../static/assets/js/imageloader.min.js}"></script>
-<script th:src="@{../static/assets/js/isotope.min.js}"></script>
-<script th:src="@{../static/assets/js/nouislider.min.js}"></script>
-<script th:src="@{../static/assets/js/owl.carousel.min.js}"></script>
-<script th:src="@{../static/assets/js/photoswipe-ui-default.min.js}"></script>
-<script th:src="@{../static/assets/js/photoswipe.min.js}"></script>
-<script th:src="@{../static/assets/js/velocity.min.js}"></script>
-<script th:src="@{../static/assets/js/script.js}"></script>
-<script th:src="@{../static/assets/js/custom.js}"></script>
-<script th:src="@{../static/assets/myjs/index.js}"></script>
+<script src="../static/assets/js/modernizr.min.js" th:src="@{../static/assets/js/modernizr.min.js}"></script>
+<script src="../static/assets/js/jquery.min.js" th:src="@{../static/assets/js/jquery.min.js}"></script>
+<script src="../static/assets/js/popper.min.js" th:src="@{../static/assets/js/popper.min.js}"></script>
+<script src="../static/assets/js/bootstrap.min.js" th:src="@{../static/assets/js/bootstrap.min.js}"></script>
+<script src="../static/assets/js/count.min.js" th:src="@{../static/assets/js/count.min.js}"></script>
+<script src="../static/assets/js/gmap.min.js" th:src="@{../static/assets/js/gmap.min.js}"></script>
+<script src="../static/assets/js/imageloader.min.js" th:src="@{../static/assets/js/imageloader.min.js}"></script>
+<script src="../static/assets/js/isotope.min.js" th:src="@{../static/assets/js/isotope.min.js}"></script>
+<script src="../static/assets/js/nouislider.min.js" th:src="@{../static/assets/js/nouislider.min.js}"></script>
+<script src="../static/assets/js/owl.carousel.min.js" th:src="@{../static/assets/js/owl.carousel.min.js}"></script>
+<script src="../static/assets/js/photoswipe-ui-default.min.js" th:src="@{../static/assets/js/photoswipe-ui-default.min.js}"></script>
+<script src="../static/assets/js/photoswipe.min.js" th:src="@{../static/assets/js/photoswipe.min.js}"></script>
+<script src="../static/assets/js/velocity.min.js" th:src="@{../static/assets/js/velocity.min.js}"></script>
+<script src="../static/assets/js/script.js" th:src="@{../static/assets/js/script.js}"></script>
+<script src="../static/assets/js/custom.js" th:src="@{../static/assets/js/custom.js}"></script>
+<!--<script src="../static/assets/myjs/index.js" th:src="@{../static/assets/myjs/index.js}"></script>-->
+<script src="../static/assets/webjs/index01.js" th:src="@{../static/assets/webjs/index01.js}"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IProductService {
 
-    List<Product> getHotList();
+    List<Product> getHotList(Integer currentPage,Integer pageNum);
 
     Product findByPid(Integer pid);
 }

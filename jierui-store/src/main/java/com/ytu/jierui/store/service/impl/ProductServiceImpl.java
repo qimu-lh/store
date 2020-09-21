@@ -15,8 +15,8 @@ public class ProductServiceImpl implements IProductService {
     private ProductMapper productMapper;
 
     @Override
-    public List<Product> getHotList() {
-        List<Product> list = productMapper.findHotList();
+    public List<Product> getHotList(Integer currentPage,Integer pageNum) {
+        List<Product> list = productMapper.findHotList(currentPage,pageNum);
         return list;
     }
 
