@@ -700,6 +700,7 @@
       <change beforePath="$PROJECT_DIR$/../homework/out/production/homework/cn/ytu/demo02.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework/src/cn/ytu/demo01.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework/src/cn/ytu/demo02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/caches/build_file_checksums.ser" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/codeStyles/Project.xml" beforeDir="false" />
@@ -1723,7 +1724,7 @@
       <workItem from="1600515407425" duration="1257000" />
       <workItem from="1600604756872" duration="4259000" />
       <workItem from="1600646199993" duration="9487000" />
-      <workItem from="1600673157210" duration="1972000" />
+      <workItem from="1600673157210" duration="2398000" />
     </task>
     <servers />
   </component>
