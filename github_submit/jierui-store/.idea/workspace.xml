@@ -701,6 +701,12 @@
       <change beforePath="$PROJECT_DIR$/../homework/src/cn/ytu/demo01.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework/src/cn/ytu/demo02.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/entity/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/entity/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/BossMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/BossMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/BossServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/BossServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BossMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BossMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ytu/jierui/store/mapper/UserMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ytu/jierui/store/mapper/UserMapperTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/BossMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/BossMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/caches/build_file_checksums.ser" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/codeStyles/Project.xml" beforeDir="false" />
@@ -1650,22 +1656,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTests.findByPid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jierui-store" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ytu.jierui.store.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ytu.jierui.store.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.service.ProductTests" />
-      <option name="METHOD_NAME" value="findByPid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductTests.findPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jierui-store" />
       <extension name="coverage">
@@ -1682,6 +1672,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserMapperTests.findBossByBossname" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jierui-store" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ytu.jierui.store.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ytu.jierui.store.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.mapper.UserMapperTests" />
+      <option name="METHOD_NAME" value="findBossByBossname" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JieruiStoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="jierui-store" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ytu.jierui.store.JieruiStoreApplication" />
@@ -1691,11 +1697,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserMapperTests.findBossByBossname" />
         <item itemvalue="JUnit.ProductTests.findPage" />
         <item itemvalue="JUnit.ProductMapperTests.findPage" />
         <item itemvalue="JUnit.BossServiceTests.login" />
         <item itemvalue="JUnit.BossServiceTests.reg" />
-        <item itemvalue="JUnit.ProductTests.findByPid" />
       </list>
     </recent_temporary>
   </component>
@@ -1725,6 +1731,7 @@
       <workItem from="1600604756872" duration="4259000" />
       <workItem from="1600646199993" duration="9487000" />
       <workItem from="1600673157210" duration="2946000" />
+      <workItem from="1600732641734" duration="8377000" />
     </task>
     <servers />
   </component>
@@ -1744,38 +1751,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600395383882" />
-    <state width="1237" height="384" key="GridCell.Tab.0.bottom" timestamp="1600676125799">
+    <state width="1237" height="384" key="GridCell.Tab.0.bottom" timestamp="1600743846779">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600676125799" />
-    <state width="1237" height="384" key="GridCell.Tab.0.center" timestamp="1600676125798">
+    <state width="1237" height="384" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600743846779" />
+    <state width="1237" height="384" key="GridCell.Tab.0.center" timestamp="1600743846779">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600676125798" />
-    <state width="1237" height="384" key="GridCell.Tab.0.left" timestamp="1600676125797">
+    <state width="1237" height="384" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600743846779" />
+    <state width="1237" height="384" key="GridCell.Tab.0.left" timestamp="1600743846778">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600676125797" />
-    <state width="1237" height="384" key="GridCell.Tab.0.right" timestamp="1600676125798">
+    <state width="1237" height="384" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600743846778" />
+    <state width="1237" height="384" key="GridCell.Tab.0.right" timestamp="1600743846779">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600676125798" />
-    <state width="1237" height="384" key="GridCell.Tab.1.bottom" timestamp="1600676125800">
+    <state width="1237" height="384" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600743846779" />
+    <state width="1237" height="384" key="GridCell.Tab.1.bottom" timestamp="1600743846779">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600676125800" />
-    <state width="1237" height="384" key="GridCell.Tab.1.center" timestamp="1600676125800">
+    <state width="1237" height="384" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600743846779" />
+    <state width="1237" height="384" key="GridCell.Tab.1.center" timestamp="1600743846779">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600676125800" />
-    <state width="1237" height="384" key="GridCell.Tab.1.left" timestamp="1600676125799">
+    <state width="1237" height="384" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600743846779" />
+    <state width="1237" height="384" key="GridCell.Tab.1.left" timestamp="1600743846779">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600676125799" />
-    <state width="1237" height="384" key="GridCell.Tab.1.right" timestamp="1600676125800">
+    <state width="1237" height="384" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600743846779" />
+    <state width="1237" height="384" key="GridCell.Tab.1.right" timestamp="1600743846779">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600676125800" />
+    <state width="1237" height="384" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600743846779" />
     <state width="1237" height="249" key="GridCell.Tab.2.bottom" timestamp="1600484863148">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -1792,9 +1799,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="249" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1600484863148" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600514880456">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600739075683">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600514880456" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600739075683" />
   </component>
 </project>

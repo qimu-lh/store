@@ -13,6 +13,9 @@
         <result column="created_time" property="createdTime"/>
         <result column="modified_user" property="modifiedUser"/>
         <result column="modified_time" property="modifiedTime"/>
+        <result column="lock_num" property="lockNum"/>
+        <result column="lock_time" property="lockTime"/>
+        <result column="unlock_time" property="unlockTime"/>
     </resultMap>
 
     <!-- 插入用户数据 -->
@@ -29,7 +32,7 @@
 
 
     <!-- 根据用户名查询用户数据 -->
-    <!-- Boss findByBossname(String bossname); -->
+    <!-- Boss findByBossname(String bossname, String password); -->
     <select id="findByBossname" resultMap="BossEntityMap">
 			SELECT
 				*
@@ -38,6 +41,21 @@
 			WHERE
 				bossname=#{bossname}
 	</select>
+
+	<!--    Integer updateLock(@Param("bossname") String bossname,,
+                       @Param("lockNum")Integer lockNum,
+                       @Param("lockTime")Date lockTime,
+                       @Param("unlockTime")Date unlockTime);-->
+	<update id="updateLock">
+		UPDATE
+			boss
+		SET
+			lock_num=#{lockNum},
+			lock_time=#{lockTime},
+			unlock_time=#{unlockTime}
+		WHERE
+			bossname=#{bossname}
+	</update>
 
 	<!-- 更新密码 -->
 	<!-- Integer updatePassword(
