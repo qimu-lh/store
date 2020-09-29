@@ -1,6 +1,7 @@
 package com.ytu.jierui.store.mapper;
 
 
+import com.ytu.jierui.store.entity.Boss;
 import com.ytu.jierui.store.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,6 +15,15 @@ public class UserMapperTests {
 
     @Autowired
     UserMapper userMapper;
+
+    @Autowired
+    BossMapper bossMapper;
+
+    @Test
+    public void findBossByBossname(){
+        Boss boss = bossMapper.findByBossname("boss");
+        System.out.println(boss);
+    }
 
     @Test
     public void save(){

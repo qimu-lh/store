@@ -17,8 +17,8 @@ public class BossServiceTests {
     @Test
     public void reg(){
         Boss boss=new Boss();
-        boss.setBossname("boss");
-        boss.setPassword("root");
+        boss.setBossname("admin02");
+        boss.setPassword("1");
         iBossService.reg(boss);
         System.out.println("OK.");
     }

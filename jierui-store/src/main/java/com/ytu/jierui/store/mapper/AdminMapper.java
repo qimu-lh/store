@@ -13,7 +13,9 @@ public interface AdminMapper {
 
     Admin findByAid(Integer aid);
 
-    Admin findByConditions(Integer aid,String adminname,Integer status);
+    Admin findByConditions(Integer aid,String adminname);
+
+    List<Admin> findAllByStatus(Integer status);
 
     List<Admin> findAllAdmin();
 

@@ -1,5 +1,6 @@
 package com.ytu.jierui.store.service.impl;
 
+import com.ytu.jierui.store.entity.Authority;
 import com.ytu.jierui.store.entity.Boss;
 import com.ytu.jierui.store.entity.User;
 import com.ytu.jierui.store.mapper.BossMapper;
@@ -63,12 +64,30 @@ public class BossServiceImpl implements IBossService {
         String salt = result.getSalt();
         // 调用getMd5Password()，基于参数password和盐值进行加密
         String md5Password = getMd5Password(password, salt);
-        // 判断加密后的密码与查询结果中的密码是否不匹配
-        if (!result.getPassword().equals(md5Password)) {
-            // 是：密码错误，抛出PasswordNotMatchException
-            throw new PasswordNotMatchException("密码错误");
-        }
 
+        //如果当前时间和解锁时间不相等，就不能执行登录
+        if (new Date().getTime()<result.getUnlockTime().getTime()){
+            throw new PasswordNotMatchException("boss 账号已冻结，请一分钟后再次尝试");
+        }else {
+            // 判断加密后的密码与查询结果中的密码是否不匹配
+            if (!result.getPassword().equals(md5Password)) {
+                // 是：密码错误 获得请求错误的次数
+                Integer lockNum=result.getLockNum();
+                if (lockNum<3){
+                    lockNum++;
+                    Date lockTime=new Date();
+                    Date unlockTime=lockTime;
+                    bossMapper.updateLock(result.getBossname(),lockNum,lockTime,unlockTime);
+                    throw new PasswordNotMatchException("密码错误");
+                }else {
+                    lockNum=0;
+                    Date lockTime=new Date();
+                    Date unlockTime= new Date(lockTime.getTime()+60000);
+                    bossMapper.updateLock(result.getBossname(),lockNum,lockTime,unlockTime);
+                    throw new PasswordNotMatchException("boss 账号已冻结，请一分钟后再次尝试");
+                }
+            }
+        }
         // 将查询结果中不应该返回的字段设置为null
         result.setCreatedUser(null);
         result.setCreatedTime(null);
@@ -78,6 +97,11 @@ public class BossServiceImpl implements IBossService {
         result.setSalt(null);
         // 返回查询结果
         return result;
+    }
+
+    @Override
+    public Authority getAuthorityByBid(Integer bid) {
+        return bossMapper.findAuthorityByBid(bid);
     }
 
     @Override

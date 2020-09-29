@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <title>入驻申请</title>
@@ -78,7 +78,9 @@
                 "success": function (json) {
                     if (json.state === 2000) {
                         alert("审核已通过！")
-                        location.href="/static/web/inApplication.html";
+                        $(obj).text("已审核")
+                        $(obj).attr({"type": "button", "class": "auditButton btn btn-default","onclick":"auditShop(this)","disabled":"disabled"});
+                        //location.href="/static/web/inApplication.html";
                     } else {
                         alert(json.message);
                         location.href="/static/web/inApplication.html";
@@ -127,20 +129,20 @@
                         html = html.replace(/#{applyTime}/g, list.applyTime);
                         html = html.replace(/#{sid}/g, list.sid);
                     }
-/*                    var html='<tr>'
-                        +'<th>#{shopname}</th>'
-                        +'<td><div style="margin-left: 100px">#{storename}</div></td>'
-                        +'<td><div style="margin-left: 100px">#{applyTime}</div></td>'
-                        +'<td><div style="margin-left: 100px"><button type="button" class="auditButton btn btn-default" onclick="auditShop(this)">#{status}</button><lable style="display:none">#{sid}</lable></div></td>'
-                        +'</tr>';
-                    html = html.replace(/#{shopname}/g, list.shopname);
-                    html = html.replace(/#{storename}/g, list.storename);
-                    html = html.replace(/#{applyTime}/g, list.applyTime);
-                    html = html.replace(/#{status}/g, (list.status===0)?"审核":"已审核");
-                    html = html.replace(/#{sid}/g, list.sid);
-
-                    $("tbody").append(html);*/
+                    var html01='<div class="accountManagement-pagination row">\n' +
+                        '        <div class="col-md-3"></div>\n' +
+                        '        <div class="col-md-9" id="page">\n' +
+                        '            <nav aria-label="...">\n' +
+                        '                <ul class="pagination">\n' +
+                        '                    <li class="disabled" id="pre"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>\n' +
+                        '                    <li class="active aPage" id="li01"><a href="#l1" aria-controls="l1" role="tab" data-toggle="tab">1</a></li>\n' +
+                        '                    <li class="disabled" id="next"><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>\n' +
+                        '                </ul>\n' +
+                        '            </nav>\n' +
+                        '        </div>\n' +
+                        '    </div>';
                     $("tbody").append(html);
+                    $("#page").append(html01);
                 } else {
                     alert(json.message);
                 }

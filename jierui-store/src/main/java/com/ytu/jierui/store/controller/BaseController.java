@@ -17,6 +17,11 @@ public class BaseController {
     public static final Integer SUCCESS = 2000;
 
     /**
+     * 操作结果的“错误”状态
+     */
+    public static final Integer ERROR = 4444;
+
+    /**
      * 从Session中获取当前登录的用户的uid
      * @param session Session对象
      * @return 当前登录的用户的id

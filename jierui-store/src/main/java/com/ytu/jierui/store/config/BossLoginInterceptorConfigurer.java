@@ -13,7 +13,6 @@ import java.util.List;
 /**
  * 老板登录拦截器的配置类
  */
-/*
 @Configuration
 public class BossLoginInterceptorConfigurer implements WebMvcConfigurer {
 
@@ -27,8 +26,9 @@ public class BossLoginInterceptorConfigurer implements WebMvcConfigurer {
         excludePaths.add("/static/assets/**");
         excludePaths.add("/static/bootstrap-3.3.7-dist/**");
         //老板界面
-        excludePaths.add("/static/web/dashboard.html");
+        //excludePaths.add("/static/web/dashboard.html");
         excludePaths.add("/static/web/manage-login.html");
+        excludePaths.add("/static/web/show.html");
         //用户界面
         excludePaths.add("/static/web/account-login.html");
         excludePaths.add("/static/web/account-register.html");
@@ -47,4 +47,3 @@ public class BossLoginInterceptorConfigurer implements WebMvcConfigurer {
                 .excludePathPatterns(excludePaths);
     }
 }
-*/

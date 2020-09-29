@@ -701,6 +701,52 @@
       <change beforePath="$PROJECT_DIR$/../homework/src/cn/ytu/demo01.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../homework/src/cn/ytu/demo02.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/JieruiStoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/JieruiStoreApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/config/BossLoginInterceptorConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/config/BossLoginInterceptorConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/config/UserLoginInterceptorConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/config/UserLoginInterceptorConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/BaseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/BossController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/BossController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/entity/Boss.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/entity/Boss.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/interceptor/UserLoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/interceptor/UserLoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/AdminMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/AdminMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/BossMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/BossMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/IAdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/IBossService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/IBossService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/BossServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/BossServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ytu/jierui/store/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BossMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BossMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/webjs/account.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/webjs/account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/webjs/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/webjs/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/webjs/index01.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/webjs/index01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/account-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/account-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/accountManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/accountManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/changePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/changePassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/inApplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/inApplication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/web/manage-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/web/manage-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ytu/jierui/store/mapper/UserMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ytu/jierui/store/mapper/UserMapperTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ytu/jierui/store/service/BossServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ytu/jierui/store/service/BossServiceTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/jierui-store.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/BossMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/BossMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/webjs/account.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/webjs/account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/webjs/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/webjs/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/webjs/index01.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/assets/webjs/index01.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/web/account-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/web/account-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/web/accountManagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/web/accountManagement.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/web/changePassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/web/changePassword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/web/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/web/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/web/inApplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/web/inApplication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/web/manage-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/web/manage-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/caches/build_file_checksums.ser" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../notepad-master-master/.idea/codeStyles/Project.xml" beforeDir="false" />
@@ -1551,10 +1597,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
-        <option value="JavaScript File" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -1579,7 +1625,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mappers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -1590,29 +1636,31 @@
       <recent name="E:\Intellij_IDEA_Workspace\jierui-store\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ytu.jierui.store.mapper" />
       <recent name="com.ytu.jierui.store.config" />
       <recent name="com.ytu.jierui.store.interceptor" />
       <recent name="com.ytu.jierui.store.entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Intellij_IDEA_Workspace\jierui-store\src\main\resources\mappers" />
+      <recent name="E:\Intellij_IDEA_Workspace\jierui-store\src\main\resources\static\assets\js" />
       <recent name="E:\Intellij_IDEA_Workspace\jierui-store\src\main\resources\templates" />
       <recent name="E:\Intellij_IDEA_Workspace\jierui-store\src\main\resources\static\web" />
       <recent name="E:\Intellij_IDEA_Workspace\jierui-store\src\main\resources\static" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.JieruiStoreApplication">
-    <configuration name="BossServiceTests.login" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BossMapperTests.selectAuthority" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jierui-store" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ytu.jierui.store.service.*" />
+          <option name="PATTERN" value="com.ytu.jierui.store.mapper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ytu.jierui.store.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.service.BossServiceTests" />
-      <option name="METHOD_NAME" value="login" />
+      <option name="PACKAGE_NAME" value="com.ytu.jierui.store.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.mapper.BossMapperTests" />
+      <option name="METHOD_NAME" value="selectAuthority" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -1650,22 +1698,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductTests.findByPid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jierui-store" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ytu.jierui.store.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ytu.jierui.store.service" />
-      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.service.ProductTests" />
-      <option name="METHOD_NAME" value="findByPid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductTests.findPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jierui-store" />
       <extension name="coverage">
@@ -1682,6 +1714,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserMapperTests.findBossByBossname" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jierui-store" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ytu.jierui.store.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ytu.jierui.store.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.ytu.jierui.store.mapper.UserMapperTests" />
+      <option name="METHOD_NAME" value="findBossByBossname" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JieruiStoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="jierui-store" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ytu.jierui.store.JieruiStoreApplication" />
@@ -1691,11 +1739,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BossMapperTests.selectAuthority" />
+        <item itemvalue="JUnit.BossServiceTests.reg" />
+        <item itemvalue="JUnit.UserMapperTests.findBossByBossname" />
         <item itemvalue="JUnit.ProductTests.findPage" />
         <item itemvalue="JUnit.ProductMapperTests.findPage" />
-        <item itemvalue="JUnit.BossServiceTests.login" />
-        <item itemvalue="JUnit.BossServiceTests.reg" />
-        <item itemvalue="JUnit.ProductTests.findByPid" />
       </list>
     </recent_temporary>
   </component>
@@ -1724,7 +1772,19 @@
       <workItem from="1600515407425" duration="1257000" />
       <workItem from="1600604756872" duration="4259000" />
       <workItem from="1600646199993" duration="9487000" />
-      <workItem from="1600673157210" duration="2398000" />
+      <workItem from="1600673157210" duration="2946000" />
+      <workItem from="1600732641734" duration="9226000" />
+      <workItem from="1600755368614" duration="2618000" />
+      <workItem from="1600758103048" duration="397000" />
+      <workItem from="1600819000671" duration="5155000" />
+      <workItem from="1600827202992" duration="4633000" />
+      <workItem from="1600839220941" duration="12912000" />
+      <workItem from="1600927840164" duration="68000" />
+      <workItem from="1601192592578" duration="567000" />
+      <workItem from="1601251014967" duration="20858000" />
+      <workItem from="1601337396616" duration="9711000" />
+      <workItem from="1601348126087" duration="2029000" />
+      <workItem from="1601361084253" duration="444000" />
     </task>
     <servers />
   </component>
@@ -1732,10 +1792,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="446" y="46" key="#com.intellij.ide.util.MemberChooser" timestamp="1600510104544">
+    <state x="446" y="46" key="#com.intellij.ide.util.MemberChooser" timestamp="1601343677022">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="46" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1600510104544" />
+    <state x="446" y="46" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1601343677022" />
     <state x="254" y="263" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1600262060709">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -1744,57 +1804,65 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1600395383882" />
-    <state width="1237" height="384" key="GridCell.Tab.0.bottom" timestamp="1600675080173">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1600927915757">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600675080173" />
-    <state width="1237" height="384" key="GridCell.Tab.0.center" timestamp="1600675080172">
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600927915757" />
+    <state width="1237" height="384" key="GridCell.Tab.0.bottom" timestamp="1601361629215">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600675080172" />
-    <state width="1237" height="384" key="GridCell.Tab.0.left" timestamp="1600675080172">
+    <state width="1237" height="384" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601361629215" />
+    <state width="1237" height="384" key="GridCell.Tab.0.center" timestamp="1601361629214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600675080172" />
-    <state width="1237" height="384" key="GridCell.Tab.0.right" timestamp="1600675080173">
+    <state width="1237" height="384" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1601361629214" />
+    <state width="1237" height="384" key="GridCell.Tab.0.left" timestamp="1601361629214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600675080173" />
-    <state width="1237" height="384" key="GridCell.Tab.1.bottom" timestamp="1600675080173">
+    <state width="1237" height="384" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1601361629214" />
+    <state width="1237" height="384" key="GridCell.Tab.0.right" timestamp="1601361629214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600675080173" />
-    <state width="1237" height="384" key="GridCell.Tab.1.center" timestamp="1600675080173">
+    <state width="1237" height="384" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1601361629214" />
+    <state width="1237" height="384" key="GridCell.Tab.1.bottom" timestamp="1601361629215">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600675080173" />
-    <state width="1237" height="384" key="GridCell.Tab.1.left" timestamp="1600675080173">
+    <state width="1237" height="384" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1601361629215" />
+    <state width="1237" height="384" key="GridCell.Tab.1.center" timestamp="1601361629215">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600675080173" />
-    <state width="1237" height="384" key="GridCell.Tab.1.right" timestamp="1600675080173">
+    <state width="1237" height="384" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1601361629215" />
+    <state width="1237" height="384" key="GridCell.Tab.1.left" timestamp="1601361629215">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="384" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600675080173" />
-    <state width="1237" height="249" key="GridCell.Tab.2.bottom" timestamp="1600484863148">
+    <state width="1237" height="384" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1601361629215" />
+    <state width="1237" height="384" key="GridCell.Tab.1.right" timestamp="1601361629215">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="249" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600484863148" />
-    <state width="1237" height="249" key="GridCell.Tab.2.center" timestamp="1600484863148">
+    <state width="1237" height="384" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1601361629215" />
+    <state width="1237" height="249" key="GridCell.Tab.2.bottom" timestamp="1600853591280">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="249" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1600484863148" />
-    <state width="1237" height="249" key="GridCell.Tab.2.left" timestamp="1600484863148">
+    <state width="1237" height="249" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600853591280" />
+    <state width="1237" height="249" key="GridCell.Tab.2.center" timestamp="1600853591280">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="249" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1600484863148" />
-    <state width="1237" height="249" key="GridCell.Tab.2.right" timestamp="1600484863148">
+    <state width="1237" height="249" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1600853591280" />
+    <state width="1237" height="249" key="GridCell.Tab.2.left" timestamp="1600853591280">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="249" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1600484863148" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600514880456">
+    <state width="1237" height="249" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1600853591280" />
+    <state width="1237" height="249" key="GridCell.Tab.2.right" timestamp="1600853591280">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600514880456" />
+    <state width="1237" height="249" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1600853591280" />
+    <state x="0" y="0" width="603" height="680" key="find.popup" timestamp="1601252611332">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="603" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1601252611332" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600739075683">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600739075683" />
   </component>
 </project>

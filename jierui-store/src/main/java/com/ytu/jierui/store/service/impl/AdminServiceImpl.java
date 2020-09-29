@@ -54,6 +54,11 @@ public class AdminServiceImpl implements IAdminService {
     }
 
     @Override
+    public List<Admin> getAllAdminByStatus(Integer status) {
+        return adminMapper.findAllByStatus(status);
+    }
+
+    @Override
     public List<Admin> getAllAdmin() {
         return adminMapper.findAllAdmin();
     }
@@ -64,8 +69,8 @@ public class AdminServiceImpl implements IAdminService {
     }
 
     @Override
-    public Admin getAdminByConditions(Integer aid, String adminname, Integer status) {
-        Admin result=adminMapper.findByConditions(aid,adminname,status);
+    public Admin getAdminByConditions(Integer aid, String adminname) {
+        Admin result=adminMapper.findByConditions(aid,adminname);
         if (result==null){
             throw new UserNotFoundException("符合该条件的管理员不存在！");
         }
