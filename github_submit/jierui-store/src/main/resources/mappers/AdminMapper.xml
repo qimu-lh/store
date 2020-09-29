@@ -50,7 +50,7 @@
 				aid=#{aid}
 	</select>
 
-	<!-- Admin findByConditions(Integer aid,String adminname,Integer status);-->
+	<!-- Admin findByConditions(Integer aid,String adminname);-->
 	<select id="findByConditions" resultMap="AdminEntityMap">
 			SELECT
 				*
@@ -60,7 +60,15 @@
 				aid=#{aid}
 			AND
 				adminname=#{adminname}
-			AND
+	</select>
+
+	<!--List<Admin> findAllByStatus(Integer status);-->
+	<select id="findAllByStatus" resultMap="AdminEntityMap">
+			SELECT
+				*
+			FROM
+				admin
+			WHERE
 				status=#{status}
 	</select>
 

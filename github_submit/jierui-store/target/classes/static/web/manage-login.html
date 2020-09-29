@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <title>管理员登录</title>
@@ -51,7 +51,7 @@
                     if (json.state === 2000) {
                         alert("登录成功");
                         // 跳转到某个页面
-                        location.href="http://localhost:8080/static/web/changePassword.html";
+                        location.href="http://localhost:8080/static/web/dashboard.html";
                         window.event.returnValue=false; //return false是阻止游览器对事件的默认处理
                     } else {
                         alert(json.message);

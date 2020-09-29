@@ -34,6 +34,17 @@ $(function () {
             addIframe(arr);
         }
     }
+
+    //判断权限，是否显示账号管理
+    $('li').each(function () {
+        var res=$(this).text();
+        console.log(res)
+        if (res==="账号管理"){
+            $(this).click(function () {
+                getAccountManageAuthority();
+            })
+        }
+    })
 });
 //插入右侧ul li
 function insert(arr) {
@@ -65,7 +76,7 @@ var data = [
         icon:"glyphicon glyphicon-calendar",
         items:[
             {name:"修改密码",index:"changePassword.html"},
-            {name:"账号管理",index:"accountManagement.html"}],
+            {name:"管理账号",index:"accountManagement.html"}],
     },
     {name:"商家管理",
         icon:"glyphicon glyphicon-th",
@@ -101,3 +112,31 @@ var data = [
             {name:"用户投诉",index:"../../qwe3.html"}],
     }
 ];
+//根据权限判断是否显示账号管理
+function getAccountManageAuthority() {
+    $.ajax({
+        "url": "/bosses/authority",
+        "type": "get",
+        "dataType": "json",
+        "success": function (json) {
+            if (json.state === 2000) {
+                if (json.data.power==="v2"){
+                    $('li').each(function () {
+                        var res=$(this).text();
+                        console.log(res)
+                        if (res==="管理账号"){
+                            $(this).attr({"style":"display:none"})
+                        }
+                        if (res==="修改密码"){
+                            $(this).click(function () {
+                                $(this).next().attr({"style":"display:none"})
+                            })
+                        }
+                    })
+                }
+            } else {
+                alert(json.message);
+            }
+        }
+    });
+}

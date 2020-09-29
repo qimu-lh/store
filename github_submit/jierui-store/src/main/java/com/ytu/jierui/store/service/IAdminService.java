@@ -8,11 +8,13 @@ public interface IAdminService {
 
     void create(Admin admin);
 
+    List<Admin> getAllAdminByStatus(Integer status);
+
     List<Admin> getAllAdmin();
 
     Admin getAdminByAid(Integer aid);
 
-    Admin getAdminByConditions(Integer aid,String adminname,Integer status);
+    Admin getAdminByConditions(Integer aid,String adminname);
 
     void changeStatus(Integer aid,Integer status);
 

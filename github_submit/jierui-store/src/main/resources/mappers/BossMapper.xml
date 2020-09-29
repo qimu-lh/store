@@ -42,6 +42,17 @@
 				bossname=#{bossname}
 	</select>
 
+	<!--根据bid查询权限-->
+	<!--Authority findAuthorityByBid(Integer bid);-->
+	<select id="findAuthorityByBid" resultType="com.ytu.jierui.store.entity.Authority">
+			SELECT
+				*
+			FROM
+				authority_view
+			WHERE
+				bid=#{bid}
+	</select>
+
 	<!--    Integer updateLock(@Param("bossname") String bossname,,
                        @Param("lockNum")Integer lockNum,
                        @Param("lockTime")Date lockTime,
@@ -73,6 +84,7 @@
 		WHERE
 			bid=#{bid}
 	</update>
+
 
 </mapper>
 

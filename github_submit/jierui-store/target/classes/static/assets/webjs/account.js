@@ -21,6 +21,8 @@ $(function () {
                     pageData.operation=[{freeze:(list[i].status===0)?"冻结":"正常",delete:"删除",modify:"修改归属"}];
                     pageData_array[i]=pageData;
                 }
+                //检查权限
+                getAuthority();
                 console.log(pageData_array)
                 //调用分页jq代码
                 createWorld(pageData_array)
@@ -182,7 +184,28 @@ $(function () {
             $(tr).append($td3);
             //在tbody标签后赋上标签
             $("tbody").append($(tr));
+            //检查权限
+            getAuthority();
         }
     }
 }
+
 });
+//检查权限
+function getAuthority() {
+    $.ajax({
+        "url": "/bosses/authority",
+        "type": "get",
+        "dataType": "json",
+        "success": function (json) {
+            if (json.state === 2000) {
+                console.log(json.data)
+                if (json.data.power==="v1"){
+                    $(".delete").attr({"style": "margin-left:4px", "type": "button", "class": "btn btn-default","disabled":"disabled"});
+                }
+            } else {
+                alert(json.message);
+            }
+        }
+    });
+}

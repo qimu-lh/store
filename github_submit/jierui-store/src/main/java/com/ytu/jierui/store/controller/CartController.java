@@ -1,5 +1,6 @@
 package com.ytu.jierui.store.controller;
 
+import com.ytu.jierui.store.entity.User;
 import com.ytu.jierui.store.service.ICartService;
 import com.ytu.jierui.store.util.JsonResult;
 import com.ytu.jierui.store.vo.CartVO;
@@ -37,6 +38,8 @@ public class CartController extends BaseController{
     public String getByUid(HttpSession session, Model model) {
         // 从session中获取uid
         Integer uid = getUidFromSession(session);
+        //User user = (User)session.getAttribute("userInfo");
+        //Integer uid=user.getUid();
         // 执行查询，获取结果
         List<CartVO> data = cartService.getByUid(uid);
         model.addAttribute("carts",data);

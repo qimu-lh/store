@@ -2,6 +2,8 @@ package com.ytu.jierui.store.mapper;
 
 import com.ytu.jierui.store.entity.User;
 
+import java.util.Date;
+
 public interface UserMapper {
 
     //注册

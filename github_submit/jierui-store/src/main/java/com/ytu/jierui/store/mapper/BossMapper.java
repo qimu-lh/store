@@ -1,6 +1,7 @@
 package com.ytu.jierui.store.mapper;
 
 
+import com.ytu.jierui.store.entity.Authority;
 import com.ytu.jierui.store.entity.Boss;
 import org.apache.ibatis.annotations.Param;
 
@@ -14,6 +15,9 @@ public interface BossMapper {
     //根据用户名查询
     Boss findByBossname(String bossname);
 
+    //根据bid查询权限
+    Authority findAuthorityByBid(Integer bid);
+
     //更新锁定时的三个信息
     Integer updateLock(@Param("bossname") String bossname,
                        @Param("lockNum")Integer lockNum,
@@ -26,4 +30,5 @@ public interface BossMapper {
             @Param("password") String password,
             @Param("modifiedUser") String modifiedUser,
             @Param("modifiedTime") Date modifiedTime);
+
 }

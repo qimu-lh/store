@@ -1,5 +1,6 @@
 package com.ytu.jierui.store.service.impl;
 
+import com.ytu.jierui.store.entity.Authority;
 import com.ytu.jierui.store.entity.Boss;
 import com.ytu.jierui.store.entity.User;
 import com.ytu.jierui.store.mapper.BossMapper;
@@ -96,6 +97,11 @@ public class BossServiceImpl implements IBossService {
         result.setSalt(null);
         // 返回查询结果
         return result;
+    }
+
+    @Override
+    public Authority getAuthorityByBid(Integer bid) {
+        return bossMapper.findAuthorityByBid(bid);
     }
 
     @Override

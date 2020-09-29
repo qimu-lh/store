@@ -110,9 +110,7 @@
         </div>
     </div>
 </header>
-<!-- End NavBar -->
 <div class="offcanvas-wrapper" style="background-image: url(../assets/images/banners/background01.jpg);">
-    <!-- Start Page Title -->
     <div class="page-title">
         <div class="container">
             <div class="column">
@@ -127,8 +125,6 @@
             </div>
         </div>
     </div>
-    <!-- End Page Title -->
-    <!-- Start Account Access -->
     <div class="container padding-top-1x padding-bottom-3x">
         <div class="row">
             <div class="col-md-8">
@@ -151,8 +147,8 @@
                     </div>
                     <div class="d-flex flex-wrap justify-content-between padding-bottom-1x">
                         <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox" id="remember_me" checked>
-                            <label class="custom-control-label" for="remember_me">记住密码</label>
+                            <input class="custom-control-input" name="status" type="checkbox" id="auto">
+                            <label class="custom-control-label" for="auto">记住密码</label>
                         </div>
                         <a class="navi-link" href="../other/account-password-recovery.html">忘记密码?</a>
                     </div>
@@ -163,77 +159,32 @@
             </div>
         </div>
     </div>
-    <!-- End Account Access -->
-    <!-- Start Footer -->
     <footer class="site-footer hidden-md-down">
         <div class="container">
-            <!-- Start Copyright -->
             <p class="footer-copyright text-center">© 2020 lihao | All rights <a href="">Reserved</a></p>
-            <!-- End Copyright -->
         </div>
     </footer>
-    <!-- End Footer -->
 </div>
-<!-- Start Back To Top -->
 <a class="scroll-to-top-btn" href="#">
     <i class="icon-arrow-up"></i>
 </a>
-<!-- End Back To Top -->
 <div class="site-backdrop"></div>
-<!-- Modernizr JS -->
 <script src="../assets/js/modernizr.min.js"></script>
-<!-- JQuery JS -->
 <script src="../assets/js/jquery.min.js"></script>
-<!-- Popper JS -->
 <script src="../assets/js/popper.min.js"></script>
-<!-- Bootstrap JS -->
 <script src="../assets/js/bootstrap.min.js"></script>
-<!-- CountDown JS -->
 <script src="../assets/js/count.min.js"></script>
-<!-- Gmap JS -->
 <script src="../assets/js/gmap.min.js"></script>
-<!-- ImageLoader JS -->
 <script src="../assets/js/imageloader.min.js"></script>
-<!-- Isotope JS -->
 <script src="../assets/js/isotope.min.js"></script>
-<!-- NouiSlider JS -->
 <script src="../assets/js/nouislider.min.js"></script>
-<!-- OwlCarousel JS -->
 <script src="../assets/js/owl.carousel.min.js"></script>
-<!-- PhotoSwipe UI JS -->
 <script src="../assets/js/photoswipe-ui-default.min.js"></script>
-<!-- PhotoSwipe JS -->
 <script src="../assets/js/photoswipe.min.js"></script>
-<!-- Velocity JS -->
 <script src="../assets/js/velocity.min.js"></script>
-<!-- Main JS -->
 <script src="../assets/js/script.js"></script>
 <script src="../assets/js/custom.js"></script>
-<script>
-    $("#btn-login").click(function () {
-        if ($("#username").val()===""){
-            alert("用户名不能为空！");
-        }else if ($("#password").val()===""){
-            alert("密码不能为空！")
-        }else {
-            $.ajax({
-                "url": "/users/login",
-                "data": $("#form-login").serialize(),
-                "type": "post",
-                "dataType": "json",
-                "success": function (json) {
-                    if (json.state === 2000) {
-                        alert("登录成功");
-                        // 跳转到某个页面
-                        location.href="http://localhost:8080/products/hot";
-                        window.event.returnValue=false; //return false是阻止游览器对事件的默认处理
-                    } else {
-                        alert(json.message);
-                    }
-                }
-            });
-        }
-    })
-</script>
+<script src="../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script src="../assets/webjs/userlogin.js"></script>
 </body>
 </html>
