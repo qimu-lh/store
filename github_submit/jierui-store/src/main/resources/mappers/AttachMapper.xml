@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ytu.jierui.store.mapper.AttachMapper">
+
+    <resultMap id="AttachEntityMap" type="com.ytu.jierui.store.entity.Attach">
+        <id column="attach_id" property="attachId"/>
+        <result column="idcard_face" property="idCardFace"/>
+        <result column="idcard_back" property="idCardBack"/>
+        <result column="pecson_card" property="personCard" />
+    </resultMap>
+
+    <!-- 插入用户数据 -->
+    <!-- Integer save(Attach attach); -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="attach_id">
+			INSERT INTO b_attach (
+				idcard_face, idcard_back,person_card
+			) VALUES (
+				#{idCardFace}, #{idCardBack},#{personCard}
+			)
+	</insert>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+

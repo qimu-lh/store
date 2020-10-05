@@ -34,13 +34,19 @@ public class BossLoginInterceptorConfigurer implements WebMvcConfigurer {
         excludePaths.add("/static/web/account-register.html");
         excludePaths.add("/templates/index.html");
         excludePaths.add("/templates/shop-single.html");
+        excludePaths.add("/static/web/search-results.html");
+        //商家界面
+        excludePaths.add("/static/web/shop-register.html");
+        excludePaths.add("/static/web/shop-order.html");
         //老板请求
         excludePaths.add("/bosses/login");
         //用户请求
         excludePaths.add("/users/reg");
         excludePaths.add("/users/login");
         excludePaths.add("/products/**");
-
+        //商家请求
+        excludePaths.add("/businesses/**");
+        excludePaths.add("/orders/**");
         // 注册拦截器，并设置黑白名单
         registry.addInterceptor(bossLoginInterceptor)
                 .addPathPatterns("/**")

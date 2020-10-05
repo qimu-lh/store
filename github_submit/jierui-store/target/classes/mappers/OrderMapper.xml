@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ytu.jierui.store.mapper.OrderMapper">
+
+    <resultMap id="OrderUserEntityMap" type="com.ytu.jierui.store.entity.OrderUser">
+        <id column="oid" property="oid"/>
+        <result column="uid" property="uid"/>
+        <result column="recv_name" property="recvName"/>
+        <result column="recv_phone" property="recvPhone"/>
+        <result column="logistics" property="logistics"/>
+        <result column="state" property="state"/>
+        <result column="order_time" property="orderTime"/>
+        <result column="total_price" property="totalPrice"/>
+    </resultMap>
+
+    <!-- Integer insertOrderUser(OrderUser orderUser); -->
+    <insert id="insertOrderUser" useGeneratedKeys="true" keyProperty="oid">
+			INSERT INTO order_user (
+				uid, recv_name,recv_phone,
+				logistics,state,order_time, total_price
+			) VALUES (
+				#{uid}, #{recvName},#{recvPhone},
+				#{logistics},#{state},#{orderTime}, #{totalPrice}
+			)
+	</insert>
+
+    <!--Integer updateLogisticsByOid(String logistics,Integer oid);-->
+    <update id="updateLogisticsByOid">
+        UPDATE
+            order_user
+        SET
+            logistics=#{logistics},
+            state=1
+        WHERE
+            oid=#{oid}
+    </update>
+
+    <!--List<OrderUser> selectAll();-->
+    <select id="selectAll" resultMap="OrderUserEntityMap">
+        SELECT
+            *
+        FROM
+            order_user
+    </select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+

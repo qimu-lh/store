@@ -9,4 +9,6 @@ public interface IProductService {
     List<Product> getHotList(Integer currentPage,Integer pageNum);
 
     Product findByPid(Integer pid);
+
+    List<Product> getByStr(String str);
 }

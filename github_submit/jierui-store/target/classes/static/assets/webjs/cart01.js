@@ -1,3 +1,29 @@
+//下单
+$("#create-order-user").click(function () {
+    var totalPrice=$("#totalPrice-cart").text();
+    if (totalPrice==="0"){
+        alert("请选择至少一个下单的商品！");
+    }else {
+        $.ajax({
+            "url": "/orders/"+totalPrice+"/create",
+            "type": "POST",
+            "dataType": "json",
+            "success": function (json) {
+                if (json.state === 2000) {
+                    alert("支付成功,欢迎您继续选购~");
+                    var hrefStr="http://localhost:8080/products/hot";
+                    deleteAll(hrefStr)
+                } else {
+                    alert(json.message);
+                    location.href="http://localhost:8080/carts/";
+                }
+            },
+            "error": function () {
+                alert("您的登录信息已过期，请重新登录！");
+            }
+        });
+    }
+})
 //删除单个购物车
 function deleteCart(obj) {
     var cid=$(obj).parent().prev().prev().attr("id");
@@ -23,22 +49,8 @@ function deleteCart(obj) {
 //删除所有购物车
 $("#btn-delete-allCarts").click(function () {
     if (confirm("您确定要删除所有购物车吗？")){
-        $.ajax({
-            "url": "/carts/deleteAllCarts",
-            "type": "POST",
-            "dataType": "json",
-            "success": function (json) {
-                if (json.state === 2000) {
-                    location.href="http://localhost:8080/carts/";
-                } else {
-                    alert(json.message);
-                    location.href="http://localhost:8080/carts/";
-                }
-            },
-            "error": function () {
-                alert("您的登录信息已过期，请重新登录！");
-            }
-        });
+        var hrefStr="http://localhost:8080/carts/";
+        deleteAll(hrefStr);
     }
 })
 /*单选计算总价*/
@@ -129,6 +141,24 @@ function subNum(cid) {
                 $("#total-price-" + cid).html(json.data * price);
             } else {
                 alert(json.message);
+            }
+        },
+        "error": function () {
+            alert("您的登录信息已过期，请重新登录！");
+        }
+    });
+}
+function deleteAll(hrefStr) {
+    $.ajax({
+        "url": "/carts/deleteAllCarts",
+        "type": "POST",
+        "dataType": "json",
+        "success": function (json) {
+            if (json.state === 2000) {
+                location.href=hrefStr;
+            } else {
+                alert(json.message);
+                location.href="http://localhost:8080/carts/";
             }
         },
         "error": function () {

@@ -1,6 +1,8 @@
 $(function () {
-    /*默认加载一个界面*/
-    //TODO
+    /*点击设置下拉上传头像*/
+    $("#shezhi").click(function () {
+
+    })
 
     /*动态创建左侧单元*/
     var ul=document.createElement('ul');
@@ -43,17 +45,6 @@ $(function () {
             $(this).click(function () {
                 getAccountManageAuthority();
             })
-
-/*            $('li').each(function () {
-                var res=$(this).text();
-                console.log(res)
-                if (res==="修改密码"){
-                    $(this).click(function () {
-                        alert("xiugai")
-                    })
-                }
-            })*/
-
         }
     })
 });
@@ -123,6 +114,7 @@ var data = [
             {name:"用户投诉",index:"../../qwe3.html"}],
     }
 ];
+//根据权限判断是否显示账号管理
 function getAccountManageAuthority() {
     $.ajax({
         "url": "/bosses/authority",

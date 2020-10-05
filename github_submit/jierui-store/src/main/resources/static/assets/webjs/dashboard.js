@@ -1,6 +1,8 @@
 $(function () {
-    /*默认加载一个界面*/
-    //TODO
+    /*点击设置下拉上传头像*/
+    $("#shezhi").click(function () {
+
+    })
 
     /*动态创建左侧单元*/
     var ul=document.createElement('ul');

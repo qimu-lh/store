@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ytu.jierui.store.mapper.BusinessMapper">
+
+    <resultMap id="BusinessEntityMap" type="com.ytu.jierui.store.entity.Business">
+        <id column="business_id" property="businessId"/>
+        <result column="business_name" property="businessName"/>
+        <result column="id_card" property="idCard"/>
+        <result column="province" property="province"/>
+        <result column="city" property="city" />
+        <result column="district" property="district" />
+        <result column="address" property="address" />
+        <result column="phone" property="phone" />
+        <result column="email" property="email"/>
+        <result column="status" property="status"/>
+        <result column="apply_time" property="applyTime"/>
+    </resultMap>
+
+    <!-- 插入用户数据 -->
+    <!-- Integer save(Business business); -->
+    <insert id="save" useGeneratedKeys="true" keyProperty="business_id">
+			INSERT INTO business_info (
+				business_name, id_card,province,
+				city, district,address,
+				phone,email, status,apply_time
+			) VALUES (
+				#{businessName}, #{idCard},#{province},
+				#{city},#{district}, #{address},
+				#{phone},#{email},#{status},#{applyTime}
+			)
+	</insert>
+
+    <!--Integer updateIdByEmail(String idCard,String email);-->
+    <update id="updateIdByEmail">
+        UPDATE
+            business_info
+        SET
+            id_card=#{idCard}
+        WHERE
+            email=#{email}
+    </update>
+
+    <!--Business selectByCardId(String idCard);-->
+    <select id="selectByCardId" resultMap="BusinessEntityMap">
+        SELECT
+            *
+        FROM
+            business_info
+        WHERE
+            id_card=#{idCard}
+    </select>
+
+    <!--Business selectByEmail(String email);-->
+    <select id="selectByEmail" resultMap="BusinessEntityMap">
+        SELECT
+            *
+        FROM
+            business_info
+        WHERE
+            email=#{email}
+    </select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+

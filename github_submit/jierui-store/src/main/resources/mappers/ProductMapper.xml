@@ -36,4 +36,15 @@
 			pid=#{pid}
 	</select>
 
+	<!--模糊查询-->
+	<!--List<Product> findByStr(String str);-->
+	<select id="findByStr" resultMap="ProductEntityMap">
+		SELECT
+			*
+		FROM
+			product
+		WHERE
+		name LIKE CONCAT('%',#{str},'%')
+	</select>
+
 </mapper>

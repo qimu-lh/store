@@ -9,4 +9,6 @@ public interface ProductMapper {
     List<Product> findHotList(Integer currentPage,Integer pageNum);
 
     Product findByPid(Integer pid);
+
+    List<Product> findByStr(String str);
 }

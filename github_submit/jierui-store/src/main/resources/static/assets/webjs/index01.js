@@ -93,3 +93,9 @@ function getUserInfo() {
         }
     })
 }
+//搜索商品
+$('#inp-search').bind('keypress',function(event){
+    if(event.keyCode == "13") {
+        location.href="/static/web/search-results.html?str="+$("#inp-search").val();
+    }
+});

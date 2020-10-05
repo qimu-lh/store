@@ -24,4 +24,9 @@ public class ProductServiceImpl implements IProductService {
     public Product findByPid(Integer pid) {
         return productMapper.findByPid(pid);
     }
+
+    @Override
+    public List<Product> getByStr(String str) {
+        return productMapper.findByStr(str);
+    }
 }

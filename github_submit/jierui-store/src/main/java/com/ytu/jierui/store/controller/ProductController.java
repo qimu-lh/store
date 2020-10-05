@@ -46,4 +46,11 @@ public class ProductController extends BaseController{
         // 响应成功，及查询结果
         return "shop-single";
     }
+
+    @ResponseBody
+    @GetMapping("{str}/search")
+    public JsonResult<List<Product>> getByStr(@PathVariable("str") String str){
+        List<Product> data=productService.getByStr(str);
+        return new JsonResult<>(SUCCESS,data);
+    }
 }

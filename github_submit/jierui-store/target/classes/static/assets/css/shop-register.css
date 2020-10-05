@@ -1,0 +1,17 @@
+body{
+    background-color: #F8F9FA;
+}
+h2{
+    color: #212529;
+}
+.idCardImg{
+    width: 272px;
+    height: 170px;
+}
+.btn-show{
+    display: block;
+    margin-bottom: 17px;
+}
+.row{
+    margin-bottom: 10px;
+}
